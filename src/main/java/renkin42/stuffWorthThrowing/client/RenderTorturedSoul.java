@@ -4,15 +4,24 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.util.ResourceLocation;
 
 public class RenderTorturedSoul extends RenderLiving {
 
-	public RenderTorturedSoul(ModelBase par1ModelBase, float par2) {
-		super(par1ModelBase, par2);
+	String textureName;
+	
+	public RenderTorturedSoul(String textureName) {
+		super(new ModelTorturedSoul(), 1.0F);
+		this.textureName = textureName;
 	}
 	
 	public void renderTorturedSoul(EntityLiving entity, double par2, double par4, double par6, float par8, float par9) {
 		super.doRenderLiving(entity, par2, par4, par6, par8, par9);
+	}
+	
+	@Override
+	protected ResourceLocation func_110775_a(Entity entity) {
+		return new ResourceLocation("renkin42swt", "textures/mobs/" + textureName + ".png");
 	}
 	
 	/**

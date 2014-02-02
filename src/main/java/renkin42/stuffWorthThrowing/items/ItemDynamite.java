@@ -20,7 +20,7 @@ public class ItemDynamite extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:dynamite");
+        itemIcon = iconRegister.registerIcon("renkin42swt:dynamite");
 	}
 	
 	/**

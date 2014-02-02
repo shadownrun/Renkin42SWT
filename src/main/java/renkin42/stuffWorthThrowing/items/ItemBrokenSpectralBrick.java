@@ -20,7 +20,7 @@ public class ItemBrokenSpectralBrick extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:spectralBrickBroken");
+        itemIcon = iconRegister.registerIcon("renkin42swt:spectralBrickBroken");
 	}
 	
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)

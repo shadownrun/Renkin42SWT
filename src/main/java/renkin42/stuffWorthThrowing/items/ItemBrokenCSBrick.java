@@ -19,7 +19,7 @@ public class ItemBrokenCSBrick extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:csBrickBroken");
+        itemIcon = iconRegister.registerIcon("renkin42swt:csBrickBroken");
 	}
 	
 	/**

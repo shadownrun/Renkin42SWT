@@ -2,6 +2,7 @@ package renkin42.stuffWorthThrowing.entities;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,7 +18,7 @@ public class EntitySandPile extends EntityThrowable {
 		super(par1World);
 	}
 
-	public EntitySandPile(World par1World, EntityLiving par2EntityLiving) {
+	public EntitySandPile(World par1World, EntityLivingBase par2EntityLiving) {
 		super(par1World, par2EntityLiving);
 	}
 

@@ -30,6 +30,7 @@ import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PostInit;
@@ -44,7 +45,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
 
-@Mod(modid="StuffWorthThrowing", name="Stuff Worth Throwing (Renkin42's Base Mod)", version="152.c")
+@Mod(modid="renkin42swt", name="Stuff Worth Throwing (Renkin42's Base Mod)", version="162.a")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class StuffWorthThrowing {
 	
@@ -53,21 +54,21 @@ public class StuffWorthThrowing {
 	public static Configuration config;
 	
 	// The instance of your mod that Forge uses.
-    @Instance("StuffWorthThrowing")
+    @Instance("renkin42swt")
     public static StuffWorthThrowing instance;
     
     // Says where the client and server 'proxy' code is loaded.
     @SidedProxy(clientSide="renkin42.stuffWorthThrowing.client.ClientProxy", serverSide="renkin42.stuffWorthThrowing.CommonProxy")
     public static CommonProxy proxy;
     
-    @PreInit
+    @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
     	config = new Configuration(event.getSuggestedConfigurationFile());
     	
     	new StuffWorthThrowingConfig();
     }
     
-    @Init
+    @EventHandler
     public void load(FMLInitializationEvent event) {
     	
     	new StuffWorthThrowingItems();
@@ -128,16 +129,16 @@ public class StuffWorthThrowing {
     	LanguageRegistry.addName(StuffWorthThrowingBlocks.csBrickBlock, "CorruptedSpectralBrick");
     	
     	LanguageRegistry.instance().addStringLocalization
-    	("entity.StuffWorthThrowing.torturedSoul.name", "Tortured Soul");
+    	("entity.renkin42swt.torturedSoul.name", "Tortured Soul");
     	LanguageRegistry.instance().addStringLocalization
-    	("entity.StuffWorthThrowing.corruptedSoul.name", "Corrupted Soul");
+    	("entity.renkin42swt.corruptedSoul.name", "Corrupted Soul");
     	LanguageRegistry.instance().addStringLocalization
-    	("entity.StuffWorthThrowing.helpfulSoul.name", "Helpful Soul");
+    	("entity.renkin42swt.helpfulSoul.name", "Helpful Soul");
     	
     	proxy.registerRenderers();
     }
     
-    @PostInit
+    @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
             // Stub Method
     }

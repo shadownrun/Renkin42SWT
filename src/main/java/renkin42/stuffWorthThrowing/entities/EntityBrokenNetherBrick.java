@@ -2,6 +2,7 @@ package renkin42.stuffWorthThrowing.entities;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -15,8 +16,7 @@ public class EntityBrokenNetherBrick extends EntityThrowable {
 		super(par1World);
 	}
 
-	public EntityBrokenNetherBrick(World par1World,
-			EntityLiving par2EntityLiving) {
+	public EntityBrokenNetherBrick(World par1World, EntityLivingBase par2EntityLiving) {
 		super(par1World, par2EntityLiving);
 	}
 

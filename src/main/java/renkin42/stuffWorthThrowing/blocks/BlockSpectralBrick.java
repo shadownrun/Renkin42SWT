@@ -21,7 +21,7 @@ public class BlockSpectralBrick extends Block {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon("StuffWorthThrowing:spectralBrick");
+        blockIcon = iconRegister.registerIcon("renkin42swt:spectralBrick");
 	}
 	
 	@SideOnly(Side.CLIENT)

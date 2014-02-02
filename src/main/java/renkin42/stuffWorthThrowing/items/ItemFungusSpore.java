@@ -19,7 +19,7 @@ public class ItemFungusSpore extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:fungusSpore");
+        itemIcon = iconRegister.registerIcon("renkin42swt:fungusSpore");
 	}
 	
 	/**

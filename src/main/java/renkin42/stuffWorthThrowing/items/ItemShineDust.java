@@ -19,7 +19,7 @@ public class ItemShineDust extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:shineDust");
+        itemIcon = iconRegister.registerIcon("renkin42swt:shineDust");
 	}
 	
 	/**

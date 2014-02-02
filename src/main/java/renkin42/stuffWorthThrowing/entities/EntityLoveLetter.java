@@ -2,6 +2,7 @@ package renkin42.stuffWorthThrowing.entities;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.MovingObjectPosition;
@@ -13,7 +14,7 @@ public class EntityLoveLetter extends EntityThrowable {
 		super(par1World);
 	}
 
-	public EntityLoveLetter(World par1World, EntityLiving par2EntityLiving) {
+	public EntityLoveLetter(World par1World, EntityLivingBase par2EntityLiving) {
 		super(par1World, par2EntityLiving);
 	}
 
@@ -34,6 +35,11 @@ public class EntityLoveLetter extends EntityThrowable {
 				babyPig.setGrowingAge(-24000);
 				babyPig.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
 				this.worldObj.spawnEntityInWorld(babyPig);
+			} else if (movingobjectposition.entityHit instanceof EntityMooshroom) {
+				EntityMooshroom babyMooshroom = new EntityMooshroom(this.worldObj);
+				babyMooshroom.setGrowingAge(-24000);
+				babyMooshroom.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
+				this.worldObj.spawnEntityInWorld(babyMooshroom);
 			} else if (movingobjectposition.entityHit instanceof EntityCow) {
 				EntityCow babyCow = new EntityCow(this.worldObj);
 				babyCow.setGrowingAge(-24000);
@@ -70,12 +76,15 @@ public class EntityLoveLetter extends EntityThrowable {
 				}
 				babyOcelot.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
 				this.worldObj.spawnEntityInWorld(babyOcelot);
-			} //else if (movingobjectposition.entityHit instanceof EntityMooshroom) {
-				//EntityMooshroom babyMooshroom = new EntityMooshroom(this.worldObj);
-				//babyMooshroom.setGrowingAge(-24000);
-				//babyMooshroom.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
-				//this.worldObj.spawnEntityInWorld(babyMooshroom);
-			//}
+			} else if (movingobjectposition.entityHit instanceof EntityHorse) {
+				EntityHorse adultHorse = (EntityHorse)movingobjectposition.entityHit;
+				if (adultHorse.func_110265_bP() != 3 && adultHorse.func_110265_bP() != 4) {
+					EntityHorse babyHorse = (EntityHorse)adultHorse.createChild(adultHorse);
+					babyHorse.setGrowingAge(-24000);
+					babyHorse.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
+					this.worldObj.spawnEntityInWorld(babyHorse);
+				}
+			}
 		}
 		
 		for (int j = 0; j < 8; ++j)

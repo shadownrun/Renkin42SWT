@@ -19,7 +19,7 @@ public class ItemLoveLetter extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:loveLetter");
+        itemIcon = iconRegister.registerIcon("renkin42swt:loveLetter");
 	}
 	
 	/**

@@ -20,7 +20,7 @@ public class ItemRock extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:rock");
+        itemIcon = iconRegister.registerIcon("renkin42swt:rock");
 	}
 	
 	/**

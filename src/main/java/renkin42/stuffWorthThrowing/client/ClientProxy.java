@@ -35,9 +35,6 @@ public class ClientProxy extends CommonProxy {
 	
 	@Override
     public void registerRenderers() {
-            MinecraftForgeClient.preloadTexture(ITEMS_PNG);
-            MinecraftForgeClient.preloadTexture(BLOCK_PNG);
-            
             if (StuffWorthThrowingConfig.sneakySnowballs) {
             	thrownSnowballRock = Item.snowball;
             	thrownDynamiteSnowball = Item.snowball;
@@ -79,11 +76,11 @@ public class ClientProxy extends CommonProxy {
             RenderingRegistry.registerEntityRenderingHandler
             (EntityHateMail.class, new RenderPlane("hateMail"));
             RenderingRegistry.registerEntityRenderingHandler
-            (EntityTorturedSoul.class, new RenderTorturedSoul(new ModelTorturedSoul(), 1.0F));
+            (EntityTorturedSoul.class, new RenderTorturedSoul("torturedSoul"));
             RenderingRegistry.registerEntityRenderingHandler
-            (EntityCorruptedSoul.class, new RenderTorturedSoul(new ModelTorturedSoul(), 1.0F));
+            (EntityCorruptedSoul.class, new RenderTorturedSoul("corruptedSoul"));
             RenderingRegistry.registerEntityRenderingHandler
-            (EntityHelpfulSoul.class, new RenderTorturedSoul(new ModelTorturedSoul(), 1.0F));
+            (EntityHelpfulSoul.class, new RenderTorturedSoul("helpfulSoul"));
             
     }
 

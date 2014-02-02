@@ -4,10 +4,11 @@ import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMoveTwardsRestriction;
+import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
@@ -30,23 +31,16 @@ public class EntityTorturedSoul extends EntityMob {
 
 	public EntityTorturedSoul(World par1World) {
 		super(par1World);
-		this.texture = "/mods/StuffWorthThrowing/textures/mobs/torturedSoul.png";
 		this.isImmuneToFire = false;
 		this.experienceValue = 4;
-		this.moveSpeed = 0.35F;
 		this.getNavigator().setAvoidsWater(true);
-		this.tasks.addTask(0, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
-		this.tasks.addTask(1, new EntityAIMoveTwardsRestriction(this, this.moveSpeed));
-		this.tasks.addTask(2, new EntityAIWander(this, this.moveSpeed));
+		this.tasks.addTask(0, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
+		this.tasks.addTask(1, new EntityAIMoveTowardsRestriction(this, 1.0D));
+		this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
 		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
 		this.tasks.addTask(4, new EntityAILookIdle(this));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 16.0F, 0, true));
-	}
-
-	@Override
-	public int getMaxHealth() {
-		return 15;
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 	}
 	
 	/**
@@ -55,6 +49,12 @@ public class EntityTorturedSoul extends EntityMob {
     protected boolean isAIEnabled()
     {
         return true;
+    }
+    
+    protected void func_110147_ax() {
+    	super.func_110147_ax();
+    	this.func_110148_a(SharedMonsterAttributes.field_111267_a).func_111128_a(15.0D);
+    	this.func_110148_a(SharedMonsterAttributes.field_111263_d).func_111128_a(0.35D);
     }
     
     public int getAttackStrength(Entity par1Entity)

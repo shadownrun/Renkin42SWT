@@ -51,7 +51,7 @@ public class StuffWorthThrowingRecipes {
     	ItemStack mushroomStack1 = new ItemStack(Block.mushroomBrown);
     	ItemStack sugarStack = new ItemStack(Item.sugar);
     	ItemStack redstoneStack = new ItemStack(Item.redstone);
-    	ItemStack glowstoneStack = new ItemStack(Item.lightStoneDust);
+    	ItemStack glowstoneStack = new ItemStack(Item.glowstone);
     	ItemStack paperStack = new ItemStack(Item.paper);
     	ItemStack inkStack = new ItemStack(Item.dyePowder, 1, 0);
     	

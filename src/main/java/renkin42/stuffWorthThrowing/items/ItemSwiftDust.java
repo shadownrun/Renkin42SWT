@@ -19,7 +19,7 @@ public class ItemSwiftDust extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:swiftDust");
+        itemIcon = iconRegister.registerIcon("renkin42swt:swiftDust");
 	}
 	
 	/**

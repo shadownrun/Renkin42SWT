@@ -21,7 +21,7 @@ public class ItemSoulSandPile extends Item {
 	
 	public void registerIcons(IconRegister iconRegister)
 	{
-	         itemIcon = iconRegister.registerIcon("StuffWorthThrowing:soulSandPile");
+	         itemIcon = iconRegister.registerIcon("renkin42swt:soulSandPile");
 	}
 	
 

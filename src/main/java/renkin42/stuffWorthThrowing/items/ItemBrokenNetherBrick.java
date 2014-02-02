@@ -20,7 +20,7 @@ public class ItemBrokenNetherBrick extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:netherBrickBroken");
+        itemIcon = iconRegister.registerIcon("renkin42swt:netherBrickBroken");
 	}
 	
 	/**

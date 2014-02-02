@@ -2,6 +2,7 @@ package renkin42.stuffWorthThrowing.entities;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.potion.Potion;
@@ -12,13 +13,13 @@ import net.minecraft.world.World;
 
 public class EntityPurifiedSoul extends EntityThrowable {
 
-	EntityLiving entity;
+	EntityLivingBase entity;
 	
 	public EntityPurifiedSoul(World par1World) {
 		super(par1World);
 	}
 
-	public EntityPurifiedSoul(World par1World, EntityLiving par2EntityLiving) {
+	public EntityPurifiedSoul(World par1World, EntityLivingBase par2EntityLiving) {
 		super(par1World, par2EntityLiving);
 		this.entity = par2EntityLiving;
 	}

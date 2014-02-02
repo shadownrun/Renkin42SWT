@@ -4,6 +4,7 @@ import java.util.Random;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.potion.Potion;
@@ -19,7 +20,7 @@ public class EntityDynamite extends EntityThrowable {
 		super(par1World);
 	}
 
-	public EntityDynamite(World par1World, EntityLiving par2EntityLiving) {
+	public EntityDynamite(World par1World, EntityLivingBase par2EntityLiving) {
 		super(par1World, par2EntityLiving);
 	}
 

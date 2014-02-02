@@ -3,9 +3,9 @@ package renkin42.stuffWorthThrowing.entities;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.BlockCloth;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIFollowOwner;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
@@ -26,15 +26,13 @@ public class EntityHelpfulSoul extends EntityTameable {
 	
 	public EntityHelpfulSoul(World par1World) {
 		super(par1World);
-		this.texture = "/mods/StuffWorthThrowing/textures/mobs/helpfulSoul.png";
 		this.isImmuneToFire = false;
 		this.experienceValue = 0;
-		this.moveSpeed = 0.35F;
 		this.setSize(1.5F, 1.5F);
 		this.getNavigator().setAvoidsWater(true);
-        this.tasks.addTask(1, new EntityAIAttackOnCollide(this, this.moveSpeed, true));
-        this.tasks.addTask(2, new EntityAIFollowOwner(this, this.moveSpeed, 10.0F, 2.0F));
-        this.tasks.addTask(3, new EntityAIWander(this, this.moveSpeed));
+        this.tasks.addTask(1, new EntityAIAttackOnCollide(this, 1.0D, true));
+        this.tasks.addTask(2, new EntityAIFollowOwner(this, 1.0D, 10.0F, 2.0F));
+        this.tasks.addTask(3, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(4, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(5, new EntityAILookIdle(this));
         this.targetTasks.addTask(1, new EntityAIOwnerHurtByTarget(this));
@@ -47,11 +45,6 @@ public class EntityHelpfulSoul extends EntityTameable {
 	public EntityAgeable createChild(EntityAgeable entityageable) {
 		return null;
 	}
-
-	@Override
-	public int getMaxHealth() {
-		return 20;
-	}
 	
 	/**
      * Returns true if the newer Entity AI code should be run
@@ -59,6 +52,11 @@ public class EntityHelpfulSoul extends EntityTameable {
     public boolean isAIEnabled()
     {
         return true;
+    }
+    
+    protected void func_110147_ax() {
+    	super.func_110147_ax();
+    	this.func_110148_a(SharedMonsterAttributes.field_111263_d).func_111128_a(0.35D);
     }
     
     public int getAttackStrength(Entity par1Entity)

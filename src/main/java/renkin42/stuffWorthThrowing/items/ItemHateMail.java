@@ -19,7 +19,7 @@ public class ItemHateMail extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:hateMail");
+        itemIcon = iconRegister.registerIcon("renkin42swt:hateMail");
 	}
 	
 	/**

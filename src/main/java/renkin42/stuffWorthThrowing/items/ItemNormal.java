@@ -17,7 +17,7 @@ public class ItemNormal extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:" + unlocalizedName);
+        itemIcon = iconRegister.registerIcon("renkin42swt:" + unlocalizedName);
 	}
 
 }

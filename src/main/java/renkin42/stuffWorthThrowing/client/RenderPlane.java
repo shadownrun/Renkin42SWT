@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.ResourceLocation;
 
 public class RenderPlane extends Render {
 
@@ -28,9 +29,14 @@ public class RenderPlane extends Render {
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
         GL11.glScalef(-1.0F, -1.0F, 1.0F);
         GL11.glEnable(GL11.GL_ALPHA_TEST);
-        this.loadTexture("/mods/StuffWorthThrowing/textures/entities/" + textureName + ".png");        
+        this.func_110777_b(entityThrowable);
         planeModel.render(entityThrowable, f1, 0.0F, 0.0F, f2, f3, 0.0625F);
 		GL11.glPopMatrix();
+	}
+	
+	@Override
+	protected ResourceLocation func_110775_a(Entity entity) {
+		return new ResourceLocation("renkin42swt", "textures/entities/" + textureName + ".png");
 	}
 
 	@Override

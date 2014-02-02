@@ -21,7 +21,7 @@ public class ItemBrokenBrick extends Item {
 	}
 	
 	public void registerIcons(IconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:brickBroken");
+        itemIcon = iconRegister.registerIcon("renkin42swt:brickBroken");
 	}
 	
 	/**
