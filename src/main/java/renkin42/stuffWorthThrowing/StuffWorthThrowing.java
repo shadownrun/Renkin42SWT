@@ -96,8 +96,6 @@ public class StuffWorthThrowing {
 			EntityRegistry.addSpawn(EntityTorturedSoul.class, 1, 1, 1, EnumCreatureType.monster, BiomeGenBase.swampland);
 			EntityRegistry.addSpawn(EntityCorruptedSoul.class, 1, 1, 1, EnumCreatureType.monster, BiomeGenBase.hell);
 		}
-		
-		MinecraftForge.EVENT_BUS.register(new StuffWorthThrowingEvents());
 
 		proxy.registerRenderers();
 	}

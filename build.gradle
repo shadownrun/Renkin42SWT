@@ -22,7 +22,7 @@ group= "com.renkin42.renkin42swt" // http://maven.apache.org/guides/mini/guide-n
 archivesBaseName = "Renkin42SWT"
 
 minecraft {
-    version = "1.7.2-10.12.0.1021"
+    version = "1.7.2-10.12.0.1022"
     assetDir = "eclipse/assets"
 }
 processResources
