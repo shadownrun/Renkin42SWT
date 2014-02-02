@@ -20,13 +20,11 @@ import renkin42.stuffWorthThrowing.entities.EntitySnowballRock;
 import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
 import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
-import renkin42.stuffWorthThrowing.event.StuffWorthThrowingEvents;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -34,7 +32,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 
 @Mod(modid = StuffWorthThrowing.mod_id, version = StuffWorthThrowing.version)
@@ -97,8 +94,6 @@ public class StuffWorthThrowing {
 			EntityRegistry.addSpawn(EntityTorturedSoul.class, 1, 1, 1, EnumCreatureType.monster, BiomeGenBase.swampland);
 			EntityRegistry.addSpawn(EntityCorruptedSoul.class, 1, 1, 1, EnumCreatureType.monster, BiomeGenBase.hell);
 		}
-		
-		MinecraftForge.EVENT_BUS.register(new StuffWorthThrowingEvents());
 
 		proxy.registerRenderers();
 	}
