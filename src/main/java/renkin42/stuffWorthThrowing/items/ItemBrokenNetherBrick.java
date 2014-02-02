@@ -1,7 +1,7 @@
 package renkin42.stuffWorthThrowing.items;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
-import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
+import renkin42.stuffWorthThrowing.entities.EntityBrokenNetherBrick;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,26 +9,24 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemSoulSandPile extends Item {
+public class ItemBrokenNetherBrick extends Item {
 
-	public ItemSoulSandPile(int par1, String unlocalizedName) {
+	public ItemBrokenNetherBrick(int par1, String unlocalizedName) {
 		super(par1);
 		// Constructor Configuration
-				setMaxStackSize(16);
-				setCreativeTab(CreativeTabs.tabMaterials);
-				setUnlocalizedName(unlocalizedName);
+		setMaxStackSize(16);
+		setCreativeTab(CreativeTabs.tabMisc);
+		setUnlocalizedName(unlocalizedName);
 	}
 	
-	public void registerIcons(IconRegister iconRegister)
-	{
-	         itemIcon = iconRegister.registerIcon("StuffWorthThrowing:soulSandPile");
+	public void registerIcons(IconRegister iconRegister) {
+        itemIcon = iconRegister.registerIcon("StuffWorthThrowing:netherBrickBroken");
 	}
 	
-
 	/**
      * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
      */
-    public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
+	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
         if (StuffWorthThrowingConfig.itemsThrowable) {
         	if (!par3EntityPlayer.capabilities.isCreativeMode)
@@ -40,7 +38,7 @@ public class ItemSoulSandPile extends Item {
 
             if (!par2World.isRemote)
             {
-                par2World.spawnEntityInWorld(new EntitySoulSandPile(par2World, par3EntityPlayer));
+                par2World.spawnEntityInWorld(new EntityBrokenNetherBrick(par2World, par3EntityPlayer));
             }
         }
 

@@ -3,63 +3,67 @@ package renkin42.stuffWorthThrowing.entities;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.BlockCloth;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAIFollowOwner;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMoveTwardsRestriction;
-import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAIOwnerHurtByTarget;
+import net.minecraft.entity.ai.EntityAIOwnerHurtTarget;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-
-public class EntityTorturedSoul extends EntityMob {
+public class EntityHelpfulSoul extends EntityTameable {
 	
-	/** Random offset used in floating behaviour */
-    private float heightOffset = 0.5F;
-    
-    /** ticks until heightOffset is randomized */
-    private int heightOffsetUpdateTime;
-
-	public EntityTorturedSoul(World par1World) {
+	public EntityHelpfulSoul(World par1World) {
 		super(par1World);
-		this.texture = "/mods/StuffWorthThrowing/textures/mobs/torturedSoul.png";
+		this.texture = "/mods/StuffWorthThrowing/textures/mobs/helpfulSoul.png";
 		this.isImmuneToFire = false;
-		this.experienceValue = 4;
+		this.experienceValue = 0;
 		this.moveSpeed = 0.35F;
+		this.setSize(1.5F, 1.5F);
 		this.getNavigator().setAvoidsWater(true);
-		this.tasks.addTask(0, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
-		this.tasks.addTask(1, new EntityAIMoveTwardsRestriction(this, this.moveSpeed));
-		this.tasks.addTask(2, new EntityAIWander(this, this.moveSpeed));
-		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
-		this.tasks.addTask(4, new EntityAILookIdle(this));
-        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 16.0F, 0, true));
+        this.tasks.addTask(1, new EntityAIAttackOnCollide(this, this.moveSpeed, true));
+        this.tasks.addTask(2, new EntityAIFollowOwner(this, this.moveSpeed, 10.0F, 2.0F));
+        this.tasks.addTask(3, new EntityAIWander(this, this.moveSpeed));
+        this.tasks.addTask(4, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+        this.tasks.addTask(5, new EntityAILookIdle(this));
+        this.targetTasks.addTask(1, new EntityAIOwnerHurtByTarget(this));
+        this.targetTasks.addTask(2, new EntityAIOwnerHurtTarget(this));
+        this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
+        
+	}
+
+	@Override
+	public EntityAgeable createChild(EntityAgeable entityageable) {
+		return null;
 	}
 
 	@Override
 	public int getMaxHealth() {
-		return 15;
+		return 20;
 	}
 	
 	/**
      * Returns true if the newer Entity AI code should be run
      */
-    protected boolean isAIEnabled()
+    public boolean isAIEnabled()
     {
         return true;
     }
     
     public int getAttackStrength(Entity par1Entity)
     {
-        return 4;
+        return 5;
     }
     
     /**
@@ -94,35 +98,15 @@ public class EntityTorturedSoul extends EntityMob {
         return StuffWorthThrowingItems.ectoplasm.itemID;
     }
     
-    protected void dropRareDrop(int par1) {
-    	this.dropItem(Item.ghastTear.itemID, 1);
-    }
-    
-    public void onLivingUpdate()
-    {
-        if (!this.worldObj.isRemote)
-        {
-            --this.heightOffsetUpdateTime;
-
-            if (this.heightOffsetUpdateTime <= 0)
-            {
-                this.heightOffsetUpdateTime = 100;
-                this.heightOffset = 0.5F + (float)this.rand.nextGaussian() * 3.0F;
-            }
-            
-        }
-
-        if (!this.onGround && this.motionY < 0.0D)
-        {
-            this.motionY *= 0.6D;
-        }
-        
-        super.onLivingUpdate();
-    }
-    
     protected boolean isValidLightLevel()
     {
         return true;
+    }
+    
+    public boolean attackEntityAsMob(Entity par1Entity)
+    {
+        int i = 6;
+        return par1Entity.attackEntityFrom(DamageSource.causeMobDamage(this), i);
     }
     
     /**

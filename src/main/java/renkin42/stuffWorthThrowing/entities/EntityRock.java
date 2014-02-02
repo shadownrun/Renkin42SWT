@@ -1,8 +1,6 @@
 package renkin42.stuffWorthThrowing.entities;
 
-import java.util.Random;
-
-import renkin42.stuffWorthThrowing.StuffWorthThrowing;
+import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.potion.Potion;
@@ -30,16 +28,18 @@ public class EntityRock extends EntityThrowable {
      */
 	protected void onImpact(MovingObjectPosition par1MovingObjectPosition) {
 		if (par1MovingObjectPosition.entityHit != null) {
-            int i0 = new Random().nextInt(3) + 1;
-			byte b0 = (byte) i0;
+            int i0 = StuffWorthThrowingConfig.rockMinDamage;
+            int i1 = StuffWorthThrowingConfig.rockMaxDamage - i0 + 1;
+            int i2 = this.rand.nextInt(i1) + i0;
+            int i3 = StuffWorthThrowingConfig.dizzyMultiplier;
             
-            if (!this.worldObj.isRemote && StuffWorthThrowing.itemStatusEffects) {
+            if (!this.worldObj.isRemote && StuffWorthThrowingConfig.itemStatusEffects && StuffWorthThrowingConfig.dizzyBricks) {
             	EntityLiving entityLiving = (EntityLiving)par1MovingObjectPosition.entityHit;
             	
-            	entityLiving.addPotionEffect(new PotionEffect(Potion.confusion.getId(), i0 * 100, 0));
+            	entityLiving.addPotionEffect(new PotionEffect(Potion.confusion.getId(), i2 * i3, 0));
             }
             
-            par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), b0);
+            par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (byte)i2);
             
         }
 

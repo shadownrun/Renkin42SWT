@@ -14,25 +14,21 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
+public class EntityCorruptedSoul extends EntityMob {
 
-public class EntityTorturedSoul extends EntityMob {
-	
 	/** Random offset used in floating behaviour */
     private float heightOffset = 0.5F;
     
     /** ticks until heightOffset is randomized */
     private int heightOffsetUpdateTime;
-
-	public EntityTorturedSoul(World par1World) {
+	
+	public EntityCorruptedSoul(World par1World) {
 		super(par1World);
-		this.texture = "/mods/StuffWorthThrowing/textures/mobs/torturedSoul.png";
+		this.texture = "/mods/StuffWorthThrowing/textures/mobs/corruptedSoul.png";
 		this.isImmuneToFire = false;
-		this.experienceValue = 4;
+		this.experienceValue = 5;
 		this.moveSpeed = 0.35F;
 		this.getNavigator().setAvoidsWater(true);
 		this.tasks.addTask(0, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
@@ -46,7 +42,7 @@ public class EntityTorturedSoul extends EntityMob {
 
 	@Override
 	public int getMaxHealth() {
-		return 15;
+		return 25;
 	}
 	
 	/**
@@ -59,7 +55,7 @@ public class EntityTorturedSoul extends EntityMob {
     
     public int getAttackStrength(Entity par1Entity)
     {
-        return 4;
+        return 6;
     }
     
     /**
@@ -91,7 +87,7 @@ public class EntityTorturedSoul extends EntityMob {
      */
     protected int getDropItemId()
     {
-        return StuffWorthThrowingItems.ectoplasm.itemID;
+        return StuffWorthThrowingItems.corruptedEctoplasm.itemID;
     }
     
     protected void dropRareDrop(int par1) {

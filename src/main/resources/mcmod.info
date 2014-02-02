@@ -1,0 +1,19 @@
+[
+{
+  "modid": "StuffWorthThrowing",
+  "name": "Stuff Worth Throwing (Renkin42's Base Mod)",
+  "description": "Adds 20 new items, 16 of which can be thrown for damage, status effects, and general pleasure. Also includes 2 new blocks and 3 new mobs",
+  "version": "152.c",
+  "credits": "Created by Renkin42",
+  "logoFile": "/mods/StuffWorthThrowing/textures/logo.png",
+  "mcversion": "1.5.2",
+  "url": "http://www.minecraftforum.net/topic/1847376-152forge-renkin42s-stuff-worth-throwing-mod/",
+  "updateUrl": "",
+  "authors": [],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": [
+         "mod_MinecraftForge"
+]
+}
+]

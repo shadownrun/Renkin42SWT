@@ -1,6 +1,6 @@
 package renkin42.stuffWorthThrowing.items;
 
-import renkin42.stuffWorthThrowing.StuffWorthThrowing;
+import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import renkin42.stuffWorthThrowing.entities.EntityRock;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,7 +28,7 @@ public class ItemRock extends Item {
      */
     public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
-        if (StuffWorthThrowing.itemsThrowable) {
+        if (StuffWorthThrowingConfig.itemsThrowable) {
         	if (!par3EntityPlayer.capabilities.isCreativeMode)
             {
                 --par1ItemStack.stackSize;

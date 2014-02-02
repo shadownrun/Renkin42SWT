@@ -3,8 +3,7 @@ package renkin42.stuffWorthThrowing.client;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.monster.EntityBlaze;
-import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
+import net.minecraft.entity.EntityLiving;
 
 public class RenderTorturedSoul extends RenderLiving {
 
@@ -12,7 +11,7 @@ public class RenderTorturedSoul extends RenderLiving {
 		super(par1ModelBase, par2);
 	}
 	
-	public void renderTorturedSoul(EntityTorturedSoul entity, double par2, double par4, double par6, float par8, float par9) {
+	public void renderTorturedSoul(EntityLiving entity, double par2, double par4, double par6, float par8, float par9) {
 		super.doRenderLiving(entity, par2, par4, par6, par8, par9);
 	}
 	
@@ -24,7 +23,7 @@ public class RenderTorturedSoul extends RenderLiving {
      */
     public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9)
     {
-        this.renderTorturedSoul((EntityTorturedSoul)par1Entity, par2, par4, par6, par8, par9);
+        this.renderTorturedSoul((EntityLiving)par1Entity, par2, par4, par6, par8, par9);
     }
 
 }

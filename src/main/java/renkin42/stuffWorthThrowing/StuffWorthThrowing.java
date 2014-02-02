@@ -1,19 +1,33 @@
 package renkin42.stuffWorthThrowing;
 
+import renkin42.stuffWorthThrowing.blocks.StuffWorthThrowingBlocks;
+import renkin42.stuffWorthThrowing.entities.EntityBrokenBrick;
+import renkin42.stuffWorthThrowing.entities.EntityBrokenCSBrick;
+import renkin42.stuffWorthThrowing.entities.EntityBrokenNetherBrick;
+import renkin42.stuffWorthThrowing.entities.EntityBrokenSpectralBrick;
+import renkin42.stuffWorthThrowing.entities.EntityCorruptedSoul;
+import renkin42.stuffWorthThrowing.entities.EntityDynamite;
+import renkin42.stuffWorthThrowing.entities.EntityDynamiteSnowball;
+import renkin42.stuffWorthThrowing.entities.EntityFungusSpore;
+import renkin42.stuffWorthThrowing.entities.EntityHateMail;
+import renkin42.stuffWorthThrowing.entities.EntityHelpfulSoul;
+import renkin42.stuffWorthThrowing.entities.EntityLoveLetter;
+import renkin42.stuffWorthThrowing.entities.EntityPurifiedSoul;
 import renkin42.stuffWorthThrowing.entities.EntityRock;
 import renkin42.stuffWorthThrowing.entities.EntitySandPile;
+import renkin42.stuffWorthThrowing.entities.EntityShineDust;
 import renkin42.stuffWorthThrowing.entities.EntitySnowballRock;
 import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
+import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
-import renkin42.stuffWorthThrowing.items.ItemEctoplasm;
-import renkin42.stuffWorthThrowing.items.ItemRock;
-import renkin42.stuffWorthThrowing.items.ItemSandPile;
-import renkin42.stuffWorthThrowing.items.ItemSnowballRock;
-import renkin42.stuffWorthThrowing.items.ItemSoulSandPile;
+import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityEggInfo;
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -29,29 +43,14 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
-import net.minecraftforge.common.Property;
 
-@Mod(modid="StuffWorthThrowing", name="Stuff Worth Throwing (Renkin42's Base Mod", version="152.a")
+@Mod(modid="StuffWorthThrowing", name="Stuff Worth Throwing (Renkin42's Base Mod)", version="152.c")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class StuffWorthThrowing {
 	
-	public static Item sandPile;
-	public static Item soulSandPile;
-	public static Item rock;
-	public static Item snowballRock;
-	public static Item ectoplasm;
+	static int startEntityId = 256;
 	
-	private static int sandPileID;
-	private static int soulSandPileID;
-	private static int rockID;
-	private static int snowballRockID;
-	private static int ectoplasmID;
-	
-	public static boolean itemsThrowable;
-	public static boolean itemStatusEffects;
-	public static boolean soulSandSpawn;
-	public static boolean sneakySnowballs;
-	public static boolean spawnTorturedSouls;
+	public static Configuration config;
 	
 	// The instance of your mod that Forge uses.
     @Instance("StuffWorthThrowing")
@@ -63,88 +62,77 @@ public class StuffWorthThrowing {
     
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
-    	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+    	config = new Configuration(event.getSuggestedConfigurationFile());
     	
-    	config.load();
-    	
-    	sandPileID = config.getItem("SandPile", 4200).getInt();
-    	soulSandPileID = config.getItem("SoulSandPile", 4201).getInt();
-    	rockID = config.getItem("Rock", 4202).getInt();
-    	snowballRockID = config.getItem("SnowballRock", 4203).getInt();
-    	ectoplasmID = config.getItem("Ectoplasm", 4204).getInt();
-    	
-    	Property itemsThrowableProperty = config.get(Configuration.CATEGORY_GENERAL, "ItemsThrowable", "true");
-    	Property itemStatusEffectsProperty = config.get(Configuration.CATEGORY_GENERAL, "ItemStatusEffects", "true");
-    	Property soulSandSpawnProperty = config.get(Configuration.CATEGORY_GENERAL, "SoulSandSpawn", "true");
-    	Property sneakySnowballsProperty = config.get(Configuration.CATEGORY_GENERAL, "SneakySnowballs", "false");
-    	Property spawnTorturedSoulsProperty = config.get(Configuration.CATEGORY_GENERAL, "SpawnTorturedSouls", "true");
-    	
-    	itemsThrowableProperty.comment = "Determines whether Piles of Sand, Soul Sand Piles, and Rocks are throwable.";
-    	itemStatusEffectsProperty.comment = "Determines whether thrown items give status effects.";
-    	soulSandSpawnProperty.comment = "Determines whether throwing a Soul Sand Pile has a random chance of spawning a Tortured Soul";
-    	sneakySnowballsProperty.comment = "If true, renders thrown snowballs with rocks as regular snowballs";
-    	spawnTorturedSoulsProperty.comment = "Determines whether Tortured Souls will spawn naturally in the world.";
-    	
-    	itemsThrowable = itemsThrowableProperty.getBoolean(true);
-    	itemStatusEffects = itemStatusEffectsProperty.getBoolean(true);
-    	soulSandSpawn = soulSandSpawnProperty.getBoolean(true);
-    	sneakySnowballs = sneakySnowballsProperty.getBoolean(false);
-    	spawnTorturedSouls = spawnTorturedSoulsProperty.getBoolean(true);
-    	
-    	config.save();
+    	new StuffWorthThrowingConfig();
     }
     
     @Init
     public void load(FMLInitializationEvent event) {
     	
-    	sandPile = new ItemSandPile(sandPileID, "sandPile");
-    	soulSandPile = new ItemSoulSandPile(soulSandPileID, "soulSandPile");
-    	rock = new ItemRock(rockID, "rock");
-    	snowballRock = new ItemSnowballRock(snowballRockID, "snowballRock");
-    	ectoplasm = new ItemEctoplasm(ectoplasmID, "ectoplasm");
-    	
-    	LanguageRegistry.addName(sandPile, "Pile of Sand");
-    	LanguageRegistry.addName(soulSandPile, "One Soul's Worth of Soul Sand");
-    	LanguageRegistry.addName(rock, "Rock");
-    	LanguageRegistry.addName(snowballRock, "Snowball with a Rock in it");
-    	LanguageRegistry.addName(ectoplasm, "Ball of Ectoplasm");
-    	
-    	ItemStack sandPileStack = new ItemStack(sandPile);
-    	ItemStack soulSandPileStack = new ItemStack(soulSandPile);
-    	ItemStack rockStack = new ItemStack(rock);
-    	ItemStack snowballRockStack = new ItemStack(snowballRock);
-    	ItemStack ectoplasmStack = new ItemStack(ectoplasm);
-    	ItemStack sandPileOutputStack = new ItemStack(sandPile, 4);
-    	ItemStack soulSandPileOutputStack = new ItemStack(soulSandPile, 4);
-    	ItemStack rockOutputStack = new ItemStack(rock, 4);
-    	ItemStack sandStack = new ItemStack(Block.sand);
-    	ItemStack soulSandStack = new ItemStack(Block.slowSand);
-    	ItemStack cobbleStack = new ItemStack(Block.cobblestone);
-    	ItemStack snowStack = new ItemStack(Item.snowball);
-    	
-    	GameRegistry.addShapelessRecipe(sandPileOutputStack, sandStack);
-    	GameRegistry.addShapelessRecipe(soulSandPileOutputStack, soulSandStack);
-    	GameRegistry.addShapelessRecipe(rockOutputStack, cobbleStack);
-    	GameRegistry.addShapelessRecipe(snowballRockStack, rockStack, snowStack);
-    	GameRegistry.addShapelessRecipe(soulSandPileStack, sandPileStack, ectoplasmStack);
-    	GameRegistry.addRecipe(sandStack, "xx", "xx", 'x', sandPileStack);
-    	GameRegistry.addRecipe(soulSandStack, "yy", "yy", 'y', soulSandPileStack);
-    	GameRegistry.addRecipe(cobbleStack, "zz", "zz", 'z', rockStack);
-    	GameRegistry.addSmelting(soulSandPile.itemID, ectoplasmStack, 5);
+    	new StuffWorthThrowingItems();
+    	new StuffWorthThrowingBlocks();
+    	new StuffWorthThrowingRecipes();
     	
     	EntityRegistry.registerModEntity(EntitySandPile.class, "sandPile", 210, this, 64, 1, true);
     	EntityRegistry.registerModEntity(EntitySoulSandPile.class, "soulSandPile", 211, this, 64, 1, true);
     	EntityRegistry.registerModEntity(EntityRock.class, "rock", 212, this, 64, 1, true);
     	EntityRegistry.registerModEntity(EntitySnowballRock.class, "snowballRock", 213, this, 64, 1, true);
     	EntityRegistry.registerModEntity(EntityTorturedSoul.class, "torturedSoul", 214, this, 32, 1, true);
+    	EntityRegistry.registerModEntity(EntityBrokenBrick.class, "brokenBrick", 215, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityBrokenNetherBrick.class, "brokenNetherBrick", 216, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityBrokenSpectralBrick.class, "brokenSpectralBrick", 217, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityDynamite.class, "dynamite", 218, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityDynamiteSnowball.class, "dynamiteSnowball", 219, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityFungusSpore.class, "fungusSpore", 220, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityCorruptedSoul.class, "corruptedSoul", 221, this, 32, 1, true);
+    	EntityRegistry.registerModEntity(EntityHelpfulSoul.class, "helpfulSoul", 222, this, 32, 1, true);
+    	EntityRegistry.registerModEntity(EntityPurifiedSoul.class, "purifiedSoul", 223, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityBrokenCSBrick.class, "brokenCSBrick", 224, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntitySwiftDust.class, "swiftDust", 225, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityShineDust.class, "shineDust", 226, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityLoveLetter.class, "loveLetter", 227, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityHateMail.class, "hateMail", 228, this, 64, 1, true);
     	
-    	if (spawnTorturedSouls) {
-    		EntityRegistry.addSpawn(EntityTorturedSoul.class, 1, 1, 1, EnumCreatureType.monster, 
-        			BiomeGenBase.swampland, BiomeGenBase.hell);
+    	EntityEgg(EntityTorturedSoul.class, 0x007f60, 0x1a4139);
+    	EntityEgg(EntityCorruptedSoul.class, 0xb33c3c, 0x491818);
+    	getUniqueEntityId(EntityHelpfulSoul.class);
+    	
+    	if (StuffWorthThrowingConfig.spawnTorturedSouls) {
+    		EntityRegistry.addSpawn(EntityTorturedSoul.class, 1, 1, 1, EnumCreatureType.monster, BiomeGenBase.swampland);
+    		EntityRegistry.addSpawn(EntityCorruptedSoul.class, 1, 1, 1, EnumCreatureType.monster, BiomeGenBase.hell);
     	}
+    	
+    	LanguageRegistry.addName(StuffWorthThrowingItems.sandPile, "Pile of Sand");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.soulSandPile, "Pile of Soul Sand");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.rock, "Rock");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.snowballRock, "Snowball with a Rock in it");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.ectoplasm, "Ball of Ectoplasm");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.spectralBrick, "Spectral Brick");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.brokenBrick, "BrokenBrick");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.brokenNetherBrick, "Broken Nether Brick");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.brokenSpectralBrick, "Broken Spectral Brick");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.dynamite, "Stick of Dynamite");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.dynamiteSnowball, "Snowball with a Stick of Dynamite in it");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.fungusSpore, "Fungal Spores");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.corruptedEctoplasm, "Corrupted Ectoplasm");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.corruptedSpectralBrick, "Corrupted Spectral Brick");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.purifiedSoul, "Purified Soul Sand");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.brokenCSBrick, "Broken Corrupted Spectral Brick");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.swiftDust, "Swift Dust");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.shineDust, "Shine Dust");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.loveLetter, "Love Letter");
+    	LanguageRegistry.addName(StuffWorthThrowingItems.hateMail, "Hate Mail");
+    	
+    	LanguageRegistry.addName(StuffWorthThrowingBlocks.spectralBrickBlock, "Spectral Brick");
+    	LanguageRegistry.addName(StuffWorthThrowingBlocks.csBrickBlock, "CorruptedSpectralBrick");
     	
     	LanguageRegistry.instance().addStringLocalization
     	("entity.StuffWorthThrowing.torturedSoul.name", "Tortured Soul");
+    	LanguageRegistry.instance().addStringLocalization
+    	("entity.StuffWorthThrowing.corruptedSoul.name", "Corrupted Soul");
+    	LanguageRegistry.instance().addStringLocalization
+    	("entity.StuffWorthThrowing.helpfulSoul.name", "Helpful Soul");
     	
     	proxy.registerRenderers();
     }
@@ -154,6 +142,21 @@ public class StuffWorthThrowing {
             // Stub Method
     }
     
+    public static void EntityEgg(Class<? extends Entity > entity, int primaryColor, int secondaryColor){
+    	int id = getUniqueEntityId(entity);
+    	EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
+    }
     
+    public static int getUniqueEntityId(Class<? extends Entity > entity) 
+    {
+     do 
+     {
+      startEntityId++;
+     } 
+     while (EntityList.getStringFromID(startEntityId) != null);
+     
+     EntityList.IDtoClassMapping.put(startEntityId, entity); 
+     return startEntityId;
+    }
 
 }
