@@ -5,7 +5,7 @@ This is the source code of a mod for Minecraft Forge which primarily adds a vari
 
 [Minecraft Forums Page][mcf] | [Curse(Download) Page][curse]
 
-This source code is provided primarily as a resource to fellow modders, though I also use the code as a starting point to ask others for help, as I am by no means an experienced modder.
+This source code is provided primarily as a resource to fellow modders, though I also use the code as a starting point to ask others for help, as I am by no means an experienced modder. Please be aware that for versions prior to 1.7, the file structure of this repository is not accurate. 1.6 and 1.5 did not use a src/main/java and /resources setup. I've simply done this so changes are visible across versions.
 
 How can I Help?
 ---------------
