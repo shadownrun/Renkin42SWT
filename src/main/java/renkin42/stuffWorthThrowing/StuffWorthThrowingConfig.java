@@ -27,32 +27,19 @@ public class StuffWorthThrowingConfig {
 
 		config.load();
 
-		Property itemsThrowableProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "ItemsThrowable", true);
-		Property itemStatusEffectsProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "ItemStatusEffects", true);
-		Property soulSandSpawnProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "SoulSandSpawn", true);
-		Property sneakySnowballsProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "SneakySnowballs", false);
-		Property spawnTorturedSoulsProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "SpawnTorturedSouls", true);
-		Property dizzyBricksProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "DizzyBricks", true);
-		Property explosionStrengthProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "ExplosionStrength", 2.0);
-		Property buffMultiplierProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "BuffMultiplier", 200);
-		Property debuffMultiplierProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "DebuffMultiplier", 100);
-		Property dizzyMultiplierProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "DizzyMultiplier", 60);
-		Property rockMinDamageProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "RockMinDamage", 1);
-		Property rockMaxDamageProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "RockMaxDamage", 3);
-		Property brokenBrickStrongerProperty = config.get(
-				Configuration.CATEGORY_GENERAL, "BrokenBrickStronger", 1);
+		Property itemsThrowableProperty = config.get(Configuration.CATEGORY_GENERAL, "ItemsThrowable", true);
+		Property itemStatusEffectsProperty = config.get(Configuration.CATEGORY_GENERAL, "ItemStatusEffects", true);
+		Property soulSandSpawnProperty = config.get(Configuration.CATEGORY_GENERAL, "SoulSandSpawn", true);
+		Property sneakySnowballsProperty = config.get(Configuration.CATEGORY_GENERAL, "SneakySnowballs", false);
+		Property spawnTorturedSoulsProperty = config.get(Configuration.CATEGORY_GENERAL, "SpawnTorturedSouls", true);
+		Property dizzyBricksProperty = config.get(Configuration.CATEGORY_GENERAL, "DizzyBricks", true);
+		Property explosionStrengthProperty = config.get(Configuration.CATEGORY_GENERAL, "ExplosionStrength", 2.0);
+		Property buffMultiplierProperty = config.get(Configuration.CATEGORY_GENERAL, "BuffMultiplier", 200);
+		Property debuffMultiplierProperty = config.get(Configuration.CATEGORY_GENERAL, "DebuffMultiplier", 100);
+		Property dizzyMultiplierProperty = config.get(Configuration.CATEGORY_GENERAL, "DizzyMultiplier", 60);
+		Property rockMinDamageProperty = config.get(Configuration.CATEGORY_GENERAL, "RockMinDamage", 1);
+		Property rockMaxDamageProperty = config.get(Configuration.CATEGORY_GENERAL, "RockMaxDamage", 3);
+		Property brokenBrickStrongerProperty = config.get(Configuration.CATEGORY_GENERAL, "BrokenBrickStronger", 1);
 
 		itemsThrowableProperty.comment = "Determines whether items other than dynamite, snowballs, ectoplasm, and spectral bricks are throwable.";
 		itemStatusEffectsProperty.comment = "Determines whether thrown items give status effects.";

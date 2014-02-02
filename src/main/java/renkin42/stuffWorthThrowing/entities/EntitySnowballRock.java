@@ -1,11 +1,6 @@
 package renkin42.stuffWorthThrowing.entities;
 
-import java.util.Random;
-
-import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
-
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.projectile.EntityThrowable;

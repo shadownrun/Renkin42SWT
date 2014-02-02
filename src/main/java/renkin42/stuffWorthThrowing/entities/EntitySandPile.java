@@ -1,11 +1,8 @@
 package renkin42.stuffWorthThrowing.entities;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityThrowable;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;

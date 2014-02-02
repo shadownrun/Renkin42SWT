@@ -1,8 +1,6 @@
 package renkin42.stuffWorthThrowing.entities;
 
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
-import net.minecraft.entity.EntityAgeable;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.*;

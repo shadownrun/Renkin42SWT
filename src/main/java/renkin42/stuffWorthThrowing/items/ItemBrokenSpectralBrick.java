@@ -1,8 +1,8 @@
 package renkin42.stuffWorthThrowing.items;
 
+import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import renkin42.stuffWorthThrowing.entities.EntityBrokenSpectralBrick;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -16,10 +16,7 @@ public class ItemBrokenSpectralBrick extends Item {
 		setMaxStackSize(16);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName(unlocalizedName);
-	}
-	
-	public void registerIcons(IIconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("renkin42swt:spectralBrickBroken");
+		setTextureName(StuffWorthThrowing.mod_id + ":" + unlocalizedName);
 	}
 	
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)

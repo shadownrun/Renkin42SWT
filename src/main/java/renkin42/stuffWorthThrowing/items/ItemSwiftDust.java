@@ -1,8 +1,8 @@
 package renkin42.stuffWorthThrowing.items;
 
+import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -15,10 +15,7 @@ public class ItemSwiftDust extends Item {
 		setMaxStackSize(16);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName(unlocalizedName);
-	}
-	
-	public void registerIcons(IIconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("renkin42swt:swiftDust");
+		setTextureName(StuffWorthThrowing.mod_id + ":" + unlocalizedName);
 	}
 	
 	/**

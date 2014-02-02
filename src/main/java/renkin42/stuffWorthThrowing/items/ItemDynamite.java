@@ -1,7 +1,7 @@
 package renkin42.stuffWorthThrowing.items;
 
+import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import renkin42.stuffWorthThrowing.entities.EntityDynamite;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -11,14 +11,10 @@ import net.minecraft.world.World;
 public class ItemDynamite extends Item {
 
 	public ItemDynamite(String unlocalizedName) {
-		// Constructor Configuration
 		setMaxStackSize(16);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName(unlocalizedName);
-	}
-	
-	public void registerIcons(IIconRegister iconRegister) {
-        itemIcon = iconRegister.registerIcon("renkin42swt:dynamite");
+		setTextureName(StuffWorthThrowing.mod_id + ":" + unlocalizedName);
 	}
 	
 	/**
