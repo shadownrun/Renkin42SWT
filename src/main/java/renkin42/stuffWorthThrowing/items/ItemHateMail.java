@@ -2,7 +2,7 @@ package renkin42.stuffWorthThrowing.items;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import renkin42.stuffWorthThrowing.entities.EntityHateMail;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -11,14 +11,13 @@ import net.minecraft.world.World;
 
 public class ItemHateMail extends Item {
 
-	public ItemHateMail(int par1, String unlocalizedName) {
-		super(par1);
+	public ItemHateMail(String unlocalizedName) {
 		setMaxStackSize(16);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName(unlocalizedName);
 	}
 	
-	public void registerIcons(IconRegister iconRegister) {
+	public void registerIcons(IIconRegister iconRegister) {
         itemIcon = iconRegister.registerIcon("renkin42swt:hateMail");
 	}
 	

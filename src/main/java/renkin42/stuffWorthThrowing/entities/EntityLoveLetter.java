@@ -81,7 +81,7 @@ public class EntityLoveLetter extends EntityThrowable {
 				this.worldObj.spawnEntityInWorld(babyOcelot);
 			} else if (movingobjectposition.entityHit instanceof EntityHorse && !((EntityHorse)movingobjectposition.entityHit).isChild()) {
 				EntityHorse adultHorse = (EntityHorse)movingobjectposition.entityHit;
-				if (adultHorse.func_110265_bP() != 3 && adultHorse.func_110265_bP() != 4) {
+				if (adultHorse.getHorseType() != 3 && adultHorse.getHorseType() != 4) {
 					EntityHorse babyHorse = (EntityHorse)adultHorse.createChild(adultHorse);
 					babyHorse.setGrowingAge(-24000);
 					babyHorse.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);

@@ -2,6 +2,7 @@ package renkin42.stuffWorthThrowing.client;
 
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import renkin42.stuffWorthThrowing.CommonProxy;
 import renkin42.stuffWorthThrowing.StuffWorthThrowing;
@@ -36,8 +37,8 @@ public class ClientProxy extends CommonProxy {
 	@Override
     public void registerRenderers() {
             if (StuffWorthThrowingConfig.sneakySnowballs) {
-            	thrownSnowballRock = Item.snowball;
-            	thrownDynamiteSnowball = Item.snowball;
+            	thrownSnowballRock = Items.snowball;
+            	thrownDynamiteSnowball = Items.snowball;
             } else {
             	thrownSnowballRock = StuffWorthThrowingItems.snowballRock;
             	thrownDynamiteSnowball = StuffWorthThrowingItems.dynamiteSnowball;

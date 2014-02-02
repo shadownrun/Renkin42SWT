@@ -2,7 +2,7 @@ package renkin42.stuffWorthThrowing.items;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import renkin42.stuffWorthThrowing.entities.EntityBrokenBrick;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -11,8 +11,7 @@ import net.minecraft.world.World;
 
 public class ItemBrokenBrick extends Item {
 
-	public ItemBrokenBrick(int par1, String unlocalizedName) {
-		super(par1);
+	public ItemBrokenBrick(String unlocalizedName) {
 		// Constructor Configuration
 		setMaxStackSize(16);
 		setCreativeTab(CreativeTabs.tabMisc);
@@ -20,7 +19,7 @@ public class ItemBrokenBrick extends Item {
 			
 	}
 	
-	public void registerIcons(IconRegister iconRegister) {
+	public void registerIcons(IIconRegister iconRegister) {
         itemIcon = iconRegister.registerIcon("renkin42swt:brickBroken");
 	}
 	

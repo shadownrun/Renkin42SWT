@@ -1,7 +1,7 @@
 package renkin42.stuffWorthThrowing.items;
 
-import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import net.minecraft.item.Item;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class StuffWorthThrowingItems {
 
@@ -28,26 +28,47 @@ public class StuffWorthThrowingItems {
 	
 	public StuffWorthThrowingItems() {
 		
-		sandPile = new ItemSandPile(StuffWorthThrowingConfig.sandPileID, "sandPile");
-    	soulSandPile = new ItemSoulSandPile(StuffWorthThrowingConfig.soulSandPileID, "soulSandPile");
-    	rock = new ItemRock(StuffWorthThrowingConfig.rockID, "rock");
-    	snowballRock = new ItemSnowballRock(StuffWorthThrowingConfig.snowballRockID, "snowballRock");
-    	ectoplasm = new ItemNormal(StuffWorthThrowingConfig.ectoplasmID, "ectoplasm");
-    	spectralBrick = new ItemNormal(StuffWorthThrowingConfig.spectralBrickID, "spectralBrick");
-    	brokenBrick = new ItemBrokenBrick(StuffWorthThrowingConfig.brokenBrickID, "brokenBrick");
-    	brokenNetherBrick = new ItemBrokenNetherBrick(StuffWorthThrowingConfig.brokenNetherBrickID, "brokenNetherBrick");
-    	brokenSpectralBrick = new ItemBrokenSpectralBrick(StuffWorthThrowingConfig.brokenSpectralBrickID, "brokenSpectralBrick");
-    	dynamite = new ItemDynamite(StuffWorthThrowingConfig.dynamiteID, "dynamite");
-    	dynamiteSnowball = new ItemDynamiteSnowball(StuffWorthThrowingConfig.dynamiteSnowballID, "dynamiteSnowball");
-    	fungusSpore = new ItemFungusSpore(StuffWorthThrowingConfig.fungusSporeID, "fungusSpore");
-    	corruptedEctoplasm = new ItemNormal(StuffWorthThrowingConfig.corruptedEctoplasmID, "corruptedEctoplasm");
-    	corruptedSpectralBrick = new ItemNormal(StuffWorthThrowingConfig.csBrickID, "corruptedSpectralBrick");
-    	brokenCSBrick = new ItemBrokenCSBrick(StuffWorthThrowingConfig.csBrickBrokenID, "brokenCSBrick");
-    	purifiedSoul = new ItemPurifiedSoul(StuffWorthThrowingConfig.purifiedSoulID, "purifiedSoul");
-    	swiftDust = new ItemSwiftDust(StuffWorthThrowingConfig.swiftDustID, "swiftDust");
-    	shineDust = new ItemShineDust(StuffWorthThrowingConfig.shineDustID, "shineDust");
-    	loveLetter = new ItemLoveLetter(StuffWorthThrowingConfig.loveLetterID, "loveLetter");
-    	hateMail = new ItemHateMail(StuffWorthThrowingConfig.hateMailID, "hateMail");
+		sandPile = new ItemSandPile("sandPile");
+    	soulSandPile = new ItemSoulSandPile("soulSandPile");
+    	rock = new ItemRock("rock");
+    	snowballRock = new ItemSnowballRock("snowballRock");
+    	ectoplasm = new ItemNormal("ectoplasm");
+    	spectralBrick = new ItemNormal("spectralBrick");
+    	brokenBrick = new ItemBrokenBrick("brokenBrick");
+    	brokenNetherBrick = new ItemBrokenNetherBrick("brokenNetherBrick");
+    	brokenSpectralBrick = new ItemBrokenSpectralBrick("brokenSpectralBrick");
+    	dynamite = new ItemDynamite("dynamite");
+    	dynamiteSnowball = new ItemDynamiteSnowball("dynamiteSnowball");
+    	fungusSpore = new ItemFungusSpore("fungusSpore");
+    	corruptedEctoplasm = new ItemNormal("corruptedEctoplasm");
+    	corruptedSpectralBrick = new ItemNormal("corruptedSpectralBrick");
+    	brokenCSBrick = new ItemBrokenCSBrick("brokenCSBrick");
+    	purifiedSoul = new ItemPurifiedSoul("purifiedSoul");
+    	swiftDust = new ItemSwiftDust("swiftDust");
+    	shineDust = new ItemShineDust("shineDust");
+    	loveLetter = new ItemLoveLetter("loveLetter");
+    	hateMail = new ItemHateMail("hateMail");
+    	
+    	GameRegistry.registerItem(sandPile, "sand_pile");
+    	GameRegistry.registerItem(soulSandPile, "soul_sand_pile");
+    	GameRegistry.registerItem(rock, "rock");
+    	GameRegistry.registerItem(snowballRock, "snowball_rock");
+    	GameRegistry.registerItem(ectoplasm, "ectoplasm");
+    	GameRegistry.registerItem(spectralBrick, "spectral_brick");
+    	GameRegistry.registerItem(brokenBrick, "broken_brick");
+    	GameRegistry.registerItem(brokenNetherBrick, "broken_nether_brick");
+    	GameRegistry.registerItem(brokenSpectralBrick, "broken_spectral_brick");
+    	GameRegistry.registerItem(dynamite, "dynamite");
+    	GameRegistry.registerItem(dynamiteSnowball, "dynamite_snowball");
+    	GameRegistry.registerItem(fungusSpore, "fungus_spore");
+    	GameRegistry.registerItem(corruptedEctoplasm, "corrupted_ectoplasm");
+    	GameRegistry.registerItem(corruptedSpectralBrick, "cs_brick");
+    	GameRegistry.registerItem(brokenCSBrick, "broken_cs_brick");
+    	GameRegistry.registerItem(purifiedSoul, "purified_soul_sand");
+    	GameRegistry.registerItem(swiftDust, "swift_dust");
+    	GameRegistry.registerItem(shineDust, "shine_dust");
+    	GameRegistry.registerItem(loveLetter, "love_letter");
+    	GameRegistry.registerItem(hateMail, "hate_mail");
     	
 	}
 

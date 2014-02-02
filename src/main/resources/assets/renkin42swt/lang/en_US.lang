@@ -1,0 +1,32 @@
+
+language.name=English
+language.region=US
+language.code=en_US
+
+item.sandPile.name=Pile of Sand
+item.soulSandPile.name=Pile of Soul Sand
+item.rock.name=Rock
+item.snowballRock.name=Snowball With a Rock in It
+item.ectoplasm.name=Ectoplasm
+item.spectralBrick.name=Spectral Brick
+item.brokenBrick.name=Broken Brick
+item.brokenNetherBrick.name=Broken Nether Brick
+item.brokenSpectralBrick.name=Broken Spectral Brick
+item.dynamite.name=Stick of Dynamite
+item.dynamiteSnowball.name=Snowball With a Stick of Dynamite in It
+item.fungusSpore.name=Fungal Spores
+item.corruptedEctoplasm.name=Corrupted Ectoplasm
+item.corruptedSpectralBrick.name=Corrupted Spectral Brick
+item.brokenCSBrick.name=Broken Corrupted Spectral Brick
+item.purifiedSoul.name=Purified Soul Sand
+item.swiftDust.name=Swift Dust
+item.shineDust.name=Shine Dust
+item.loveLetter.name=Love Letter
+item.hateMail.name=Hate Mail
+
+tile.spectralBrickBlock.name=Spectral Bricks
+tile.csBrickBlock.name=Corrupted Spectral Bricks
+
+entity.renkin42swt.torturedSoul.name=Tortured Soul
+entity.renkin42swt.corruptedSoul.name=Corrupted Soul
+entity.renkin42swt.helpfulSoul.name=Helpful Soul

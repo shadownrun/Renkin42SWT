@@ -1,12 +1,9 @@
 package renkin42.stuffWorthThrowing.entities;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
@@ -45,7 +42,7 @@ public class EntityPurifiedSoul extends EntityThrowable {
 			EntityHelpfulSoul entitysoul = new EntityHelpfulSoul(this.worldObj);
             entitysoul.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
             entitysoul.setTamed(true);
-            entitysoul.setOwner(player.username);
+            entitysoul.setOwner(player.getCommandSenderName());
             entitysoul.worldObj.setEntityState(entitysoul, (byte)7);
             this.worldObj.spawnEntityInWorld(entitysoul);
             

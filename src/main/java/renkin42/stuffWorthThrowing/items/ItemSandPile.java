@@ -1,8 +1,10 @@
 package renkin42.stuffWorthThrowing.items;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import renkin42.stuffWorthThrowing.entities.EntitySandPile;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -11,15 +13,16 @@ import net.minecraft.world.World;
 
 public class ItemSandPile extends Item {
 	
-	public ItemSandPile(int par1, String unlocalizedName) {
-		super(par1);
+	public ItemSandPile(String unlocalizedName) {
 		// Constructor Configuration
 		setMaxStackSize(16);
 		setCreativeTab(CreativeTabs.tabMaterials);
 		setUnlocalizedName(unlocalizedName);
 	}
 	
-	public void registerIcons(IconRegister iconRegister) {
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void registerIcons(IIconRegister iconRegister) {
 	         itemIcon = iconRegister.registerIcon("renkin42swt:sandPile");
 	}
 	
