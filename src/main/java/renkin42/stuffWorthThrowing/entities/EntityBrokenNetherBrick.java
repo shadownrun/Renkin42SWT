@@ -34,7 +34,7 @@ public class EntityBrokenNetherBrick extends EntityThrowable {
             int i4 = StuffWorthThrowingConfig.debuffMultiplier;
             
             if (!this.worldObj.isRemote && StuffWorthThrowingConfig.itemStatusEffects) {
-            	EntityLiving entityLiving = (EntityLiving)par1MovingObjectPosition.entityHit;
+            	EntityLivingBase entityLiving = (EntityLivingBase)par1MovingObjectPosition.entityHit;
             	
             	entityLiving.setFire(i2 * i4 / 20);
             	if(StuffWorthThrowingConfig.dizzyBricks) {

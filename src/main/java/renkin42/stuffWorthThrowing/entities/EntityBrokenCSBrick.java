@@ -35,7 +35,7 @@ public class EntityBrokenCSBrick extends EntityThrowable {
             int i4 = StuffWorthThrowingConfig.debuffMultiplier;
 		
 			if (!this.worldObj.isRemote && StuffWorthThrowingConfig.itemStatusEffects) {
-				EntityLiving entityLiving = (EntityLiving)par1MovingObjectPosition.entityHit;
+				EntityLivingBase entityLiving = (EntityLivingBase)par1MovingObjectPosition.entityHit;
         	
 				entityLiving.addPotionEffect(new PotionEffect(Potion.wither.getId(), i2 * i4, 0));
 				if(StuffWorthThrowingConfig.dizzyBricks) {

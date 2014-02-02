@@ -45,7 +45,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
 
-@Mod(modid="renkin42swt", name="Stuff Worth Throwing (Renkin42's Base Mod)", version="162.a")
+@Mod(modid="renkin42swt", name="Stuff Worth Throwing (Renkin42's Base Mod)", version="162.b")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class StuffWorthThrowing {
 	

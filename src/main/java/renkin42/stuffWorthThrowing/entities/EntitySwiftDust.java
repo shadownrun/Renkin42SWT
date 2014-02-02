@@ -31,7 +31,7 @@ public class EntitySwiftDust extends EntityThrowable {
             int i0 = StuffWorthThrowingConfig.buffMultiplier;
             
             if (!this.worldObj.isRemote && StuffWorthThrowingConfig.itemStatusEffects) {
-            	EntityLiving entityLiving = (EntityLiving)par1MovingObjectPosition.entityHit;
+            	EntityLivingBase entityLiving = (EntityLivingBase)par1MovingObjectPosition.entityHit;
             	
             	entityLiving.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 3 * i0, 0));
             }

@@ -31,7 +31,7 @@ public class EntityFungusSpore extends EntityThrowable {
             int i0 = StuffWorthThrowingConfig.debuffMultiplier;
             
             if (!this.worldObj.isRemote && StuffWorthThrowingConfig.itemStatusEffects) {
-            	EntityLiving entityLiving = (EntityLiving)par1MovingObjectPosition.entityHit;
+            	EntityLivingBase entityLiving = (EntityLivingBase)par1MovingObjectPosition.entityHit;
             	
             	entityLiving.addPotionEffect(new PotionEffect(Potion.poison.getId(), 2 * i0, 0));
             	entityLiving.addPotionEffect(new PotionEffect(Potion.moveSlowdown.getId(), 2 * i0, 0));

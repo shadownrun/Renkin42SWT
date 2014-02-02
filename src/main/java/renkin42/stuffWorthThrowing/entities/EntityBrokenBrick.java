@@ -33,7 +33,7 @@ public class EntityBrokenBrick extends EntityThrowable {
             int i3 = StuffWorthThrowingConfig.dizzyMultiplier;
             
             if (!this.worldObj.isRemote && StuffWorthThrowingConfig.itemStatusEffects && StuffWorthThrowingConfig.dizzyBricks) {
-            	EntityLiving entityLiving = (EntityLiving)par1MovingObjectPosition.entityHit;
+            	EntityLivingBase entityLiving = (EntityLivingBase)par1MovingObjectPosition.entityHit;
             	
             	entityLiving.addPotionEffect(new PotionEffect(Potion.confusion.getId(), i2 * i3, 0));
             }
