@@ -39,7 +39,10 @@ public class BlockCorruptedSpectralBrick extends Block {
      */
     public boolean func_149646_a(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
-        return super.func_149646_a(par1IBlockAccess, par2, par3, par4, 1 - par5);
+		Block block = par1IBlockAccess.func_147439_a(par2, par3, par4);
+		Block block1 = StuffWorthThrowingBlocks.spectralBrickBlock;
+		boolean render = super.func_149646_a(par1IBlockAccess, par2, par3, par4, par5);
+		return true && block == this ? false : render && block == block1 ? false : render;
     }
 	
 	@Override
