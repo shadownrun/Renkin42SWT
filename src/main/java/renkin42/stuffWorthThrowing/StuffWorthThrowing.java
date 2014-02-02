@@ -20,7 +20,6 @@ import renkin42.stuffWorthThrowing.entities.EntitySnowballRock;
 import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
 import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
-import renkin42.stuffWorthThrowing.event.StuffWorthThrowingEvents;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
