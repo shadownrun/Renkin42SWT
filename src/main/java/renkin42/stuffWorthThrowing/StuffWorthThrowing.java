@@ -21,31 +21,24 @@ import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
 import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityEggInfo;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.item.Item;
 import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
 
-@Mod(modid="renkin42swt", name="Stuff Worth Throwing (Renkin42's Base Mod)", version="162.b")
+@Mod(modid="renkin42swt", name="Stuff Worth Throwing (Renkin42's Base Mod)", version="164.a")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class StuffWorthThrowing {
 	
@@ -143,12 +136,14 @@ public class StuffWorthThrowing {
             // Stub Method
     }
     
-    public static void EntityEgg(Class<? extends Entity > entity, int primaryColor, int secondaryColor){
+    @SuppressWarnings("unchecked")
+	public static void EntityEgg(Class<? extends Entity > entity, int primaryColor, int secondaryColor){
     	int id = getUniqueEntityId(entity);
     	EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
     }
     
-    public static int getUniqueEntityId(Class<? extends Entity > entity) 
+    @SuppressWarnings("unchecked")
+	public static int getUniqueEntityId(Class<? extends Entity > entity) 
     {
      do 
      {

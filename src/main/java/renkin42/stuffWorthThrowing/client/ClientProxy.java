@@ -1,10 +1,8 @@
 package renkin42.stuffWorthThrowing.client;
 
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
 import renkin42.stuffWorthThrowing.CommonProxy;
-import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import renkin42.stuffWorthThrowing.entities.EntityBrokenBrick;
 import renkin42.stuffWorthThrowing.entities.EntityBrokenCSBrick;
@@ -27,7 +25,6 @@ import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.common.registry.EntityRegistry;
 
 public class ClientProxy extends CommonProxy {
 	Item thrownSnowballRock;

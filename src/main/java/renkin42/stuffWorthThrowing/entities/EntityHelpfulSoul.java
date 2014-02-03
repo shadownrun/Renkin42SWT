@@ -16,10 +16,7 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class EntityHelpfulSoul extends EntityTameable {
@@ -55,8 +52,8 @@ public class EntityHelpfulSoul extends EntityTameable {
     }
     
     protected void func_110147_ax() {
-    	super.func_110147_ax();
-    	this.func_110148_a(SharedMonsterAttributes.field_111263_d).func_111128_a(0.35D);
+    	super.applyEntityAttributes();
+    	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.35D);
     }
     
     public int getAttackStrength(Entity par1Entity)
@@ -125,5 +122,10 @@ public class EntityHelpfulSoul extends EntityTameable {
     {
         return 0.5F;
     }
+
+	@Override
+	public Entity getOwner() {
+		return this.worldObj.getPlayerEntityByName(this.getOwnerName());
+	}
 
 }

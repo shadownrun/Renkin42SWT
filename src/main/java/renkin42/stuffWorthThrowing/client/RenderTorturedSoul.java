@@ -1,6 +1,5 @@
 package renkin42.stuffWorthThrowing.client;
 
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -20,7 +19,7 @@ public class RenderTorturedSoul extends RenderLiving {
 	}
 	
 	@Override
-	protected ResourceLocation func_110775_a(Entity entity) {
+	protected ResourceLocation getEntityTexture(Entity entity) {
 		return new ResourceLocation("renkin42swt", "textures/mobs/" + textureName + ".png");
 	}
 	

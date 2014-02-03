@@ -1,13 +1,11 @@
 package renkin42.stuffWorthThrowing.entities;
 
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.passive.EntityHorse;
-import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
@@ -46,7 +44,7 @@ public class EntityHateMail extends EntityThrowable {
 				this.worldObj.spawnEntityInWorld(babyZombie);
 			} else if (movingobjectposition.entityHit instanceof EntityHorse && !((EntityHorse)movingobjectposition.entityHit).isChild()) {
 				EntityHorse adultHorse = (EntityHorse)movingobjectposition.entityHit;
-				if (adultHorse.func_110265_bP() == 3 || adultHorse.func_110265_bP() == 4) {
+				if (adultHorse.getHorseType() == 3 || adultHorse.getHorseType() == 4) {
 					EntityHorse babyHorse = (EntityHorse)adultHorse.createChild(adultHorse);
 					babyHorse.setGrowingAge(-24000);
 					babyHorse.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);

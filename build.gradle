@@ -17,12 +17,12 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "172.a"
+version = "164.a"
 group= "com.renkin42.renkin42swt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Renkin42SWT"
 
 minecraft {
-    version = "1.6.4-9.11.1.965"
+    version = "1.6.4-9.11.1.964"
     assetDir = "eclipse/assets"
 }
 processResources

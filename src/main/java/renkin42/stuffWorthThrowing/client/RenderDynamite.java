@@ -27,13 +27,13 @@ public class RenderDynamite extends Render {
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
         GL11.glScalef(-1.0F, -1.0F, 1.0F);
         GL11.glEnable(GL11.GL_ALPHA_TEST);
-        this.func_110777_b(entityDynamite);
+        this.bindEntityTexture(entityDynamite);
         dynamiteModel.render(entityDynamite, f1, 0.0F, 0.0F, f2, f3, 0.0625F);
 		GL11.glPopMatrix();
 	}
 	
 	@Override
-	protected ResourceLocation func_110775_a(Entity entity) {
+	protected ResourceLocation getEntityTexture(Entity entity) {
 		return new ResourceLocation("renkin42swt", "textures/entities/dynamiteEntity.png");
 	}
 

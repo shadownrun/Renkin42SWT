@@ -15,9 +15,6 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 
@@ -51,10 +48,10 @@ public class EntityTorturedSoul extends EntityMob {
         return true;
     }
     
-    protected void func_110147_ax() {
-    	super.func_110147_ax();
-    	this.func_110148_a(SharedMonsterAttributes.field_111267_a).func_111128_a(15.0D);
-    	this.func_110148_a(SharedMonsterAttributes.field_111263_d).func_111128_a(0.35D);
+    protected void applyEntityAttributes() {
+    	super.applyEntityAttributes();
+    	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(15.0D);
+    	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.35D);
     }
     
     public int getAttackStrength(Entity par1Entity)

@@ -1,6 +1,5 @@
 package renkin42.stuffWorthThrowing.items;
 
-import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
 import renkin42.stuffWorthThrowing.entities.EntityDynamite;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
