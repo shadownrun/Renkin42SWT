@@ -237,7 +237,7 @@ LICENSE-fml.txt
 MinecraftForge-Credits.txt
 MinecraftForge-License.txt
 forge-*-changelog.txt
-README.txt
+/README.txt
 options.txt
 config/
 logs/
