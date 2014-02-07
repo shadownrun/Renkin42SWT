@@ -50,8 +50,8 @@ public class EntityCorruptedSoul extends EntityMob {
     
     protected void applyEntityAttributes() {
     	super.applyEntityAttributes();
-    	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(25.0D);
-    	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.35D);
+    	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(25.0D);
+    	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
     }
     
     public int getAttackStrength(Entity par1Entity)
@@ -86,13 +86,14 @@ public class EntityCorruptedSoul extends EntityMob {
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return StuffWorthThrowingItems.corruptedEctoplasm;
     }
     
+    
     protected void dropRareDrop(int par1) {
-    	this.func_145779_a(Items.ghast_tear, 1);
+    	this.dropItem(Items.ghast_tear, 1);
     }
     
     public void onLivingUpdate()

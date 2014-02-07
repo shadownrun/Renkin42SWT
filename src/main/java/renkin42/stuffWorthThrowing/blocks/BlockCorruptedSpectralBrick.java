@@ -12,13 +12,13 @@ public class BlockCorruptedSpectralBrick extends Block {
 
 	public BlockCorruptedSpectralBrick(Material par2Material, String unlocalizedName) {
 		super(par2Material);
-		func_149647_a(CreativeTabs.tabBlock);                             //Sets Creative Tab
-		func_149663_c(unlocalizedName);                                   //Sets Unlocalized Name
-		func_149711_c(2.5F);                                              //Sets Hardness
-		func_149752_b(500.0F);                                            //Sets Blast Resistance
-		func_149715_a(0.6F);                                              //Sets Light Value
-		func_149672_a(field_149780_i);                                    //Sets footstep sound
-		func_149658_d(StuffWorthThrowing.mod_id + ":" + unlocalizedName); //Sets texture name
+		setCreativeTab(CreativeTabs.tabBlock);
+		setBlockName(unlocalizedName);
+		setHardness(2.5F);
+		setResistance(500.0F);
+		setLightLevel(0.6F);
+		setStepSound(soundTypeStone);
+		setBlockTextureName(StuffWorthThrowing.mod_id + ":" + unlocalizedName);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -26,7 +26,7 @@ public class BlockCorruptedSpectralBrick extends Block {
     /**
      * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
      */
-    public int func_149701_w()
+    public int getRenderBlockPass()
     {
             return 1;
     }
@@ -37,11 +37,11 @@ public class BlockCorruptedSpectralBrick extends Block {
      * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given
      * coordinates.  Args: blockAccess, x, y, z, side
      */
-    public boolean func_149646_a(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+    public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
-		Block block = par1IBlockAccess.func_147439_a(par2, par3, par4);
+		Block block = par1IBlockAccess.getBlock(par2, par3, par4);
 		Block block1 = StuffWorthThrowingBlocks.spectralBrickBlock;
-		boolean render = super.func_149646_a(par1IBlockAccess, par2, par3, par4, par5);
+		boolean render = super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
 		return true && block == this ? false : render && block == block1 ? false : render;
     }
 	
@@ -50,7 +50,7 @@ public class BlockCorruptedSpectralBrick extends Block {
      * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
      * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
      */
-	public boolean func_149662_c()
+	public boolean isOpaqueCube()
     {
         return false;
     }

@@ -54,7 +54,7 @@ public class EntityHelpfulSoul extends EntityTameable {
     
     protected void applyEntityAttributes() {
     	super.applyEntityAttributes();
-    	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.35D);
+    	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
     }
     
     public int getAttackStrength(Entity par1Entity)
@@ -89,7 +89,7 @@ public class EntityHelpfulSoul extends EntityTameable {
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return StuffWorthThrowingItems.ectoplasm;
     }
