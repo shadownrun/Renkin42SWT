@@ -3,7 +3,6 @@ package renkin42.stuffWorthThrowing.entities;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
@@ -41,6 +40,7 @@ public class EntityTorturedSoul extends EntityMob {
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
 	}
 	
+	@Override
 	/**
      * Returns true if the newer Entity AI code should be run
      */
@@ -49,17 +49,15 @@ public class EntityTorturedSoul extends EntityMob {
         return true;
     }
     
+	@Override
     protected void applyEntityAttributes() {
     	super.applyEntityAttributes();
     	this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(15.0D);
     	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
+    	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(4.0D);
     }
     
-    public int getAttackStrength(Entity par1Entity)
-    {
-        return 4;
-    }
-    
+	@Override
     /**
      * Returns the sound this mob makes while it's alive.
      */
@@ -68,6 +66,7 @@ public class EntityTorturedSoul extends EntityMob {
         return "mob.ghast.moan";
     }
 
+	@Override
     /**
      * Returns the sound this mob makes when it is hurt.
      */
@@ -76,6 +75,7 @@ public class EntityTorturedSoul extends EntityMob {
         return "mob.ghast.scream";
     }
 
+	@Override
     /**
      * Returns the sound this mob makes on death.
      */
@@ -84,6 +84,7 @@ public class EntityTorturedSoul extends EntityMob {
         return "mob.ghast.death";
     }
     
+	@Override
     /**
      * Returns the item ID for the item the mob drops on death.
      */
@@ -92,10 +93,12 @@ public class EntityTorturedSoul extends EntityMob {
         return StuffWorthThrowingItems.ectoplasm;
     }
     
+	@Override
     protected void dropRareDrop(int par1) {
     	this.dropItem(Items.ghast_tear, 1);
     }
     
+	@Override
     public void onLivingUpdate()
     {
         if (!this.worldObj.isRemote)
@@ -118,6 +121,7 @@ public class EntityTorturedSoul extends EntityMob {
         super.onLivingUpdate();
     }
     
+	@Override
     protected boolean isValidLightLevel()
     {
         return true;
@@ -128,12 +132,14 @@ public class EntityTorturedSoul extends EntityMob {
      */
     protected void fall(float par1) {}
     
+    @Override
     @SideOnly(Side.CLIENT)
     public int getBrightnessForRender(float par1)
     {
         return 15728880;
     }
 
+    @Override
     /**
      * Gets how bright this entity is.
      */
