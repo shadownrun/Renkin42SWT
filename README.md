@@ -12,7 +12,7 @@ How can I Help?
 
 My biggest need right now is translated .lang files. However, any code improvements are greatly appreciated. This repository should be ready to clone to a Forge Gradle installation, but you're on your own as far as how to accomplish that. 
 
-The lang files, though, can be done right here in GitHub. Just swtich to the 'unreleased' branch and navigate to src/main/resources/assets/renkin42swt/lang and create a new file. name it something like aa_AA.lang (aa_AA should be replaced with the appropriate name from Minecraft's assets folder). Copy the contents of en_US.lang into it and edit all the stuff on the right side of the '='. Then just commit it. 
+The lang files, though, can be done right here in GitHub. Just fork this repository and switch to the "unreleased" branch. Then, navigate to "src/main/resources/assets/renkin42swt/lang". Here create a new file called something like aa_BB.lang. You can get the correct name from [here][lang-codes]. Copy the contents of en_US.lang into this file, edit it, and commit. Then simply issue a Pull Request and I'll handle it from there.
 
 [mcf]: http://www.minecraftforum.net/topic/1847376-forge-renkin42s-stuff-worth-throwing-mod/
 [curse]: http://www.curse.com/mc-mods/minecraft/stuff-worth-throwing
