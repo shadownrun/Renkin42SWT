@@ -16,3 +16,4 @@ The lang files, though, can be done right here in GitHub. Just fork this reposit
 
 [mcf]: http://www.minecraftforum.net/topic/1847376-forge-renkin42s-stuff-worth-throwing-mod/
 [curse]: http://www.curse.com/mc-mods/minecraft/stuff-worth-throwing
+[lang-codes]: http://minecraft.gamepedia.com/Language
