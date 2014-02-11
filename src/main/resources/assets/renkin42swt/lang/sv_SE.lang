@@ -1,0 +1,27 @@
+item.sandPile.name=Hög av sand
+item.soulSandPile.name=Hög av själsand
+item.rock.name=Sten
+item.snowballRock.name=Snöboll med en sten i
+item.ectoplasm.name=Ektoplasma
+item.spectralBrick.name=Spöklik tegelsten
+item.brokenBrick.name=Trasig tegelsten
+item.brokenNetherBrick.name=Trasig nethertegelsten
+item.brokenSpectralBrick.name=Trasig spöklik tegelsten
+item.dynamite.name=Dynamitgubbe
+item.dynamiteSnowball.name=Snöboll med dynamitgubbe i
+item.fungusSpore.name=Svampsporer
+item.corruptedEctoplasm.name=Korrupt ektoplasma
+item.corruptedSpectralBrick.name=Korrupt spöklik tegelsten
+item.brokenCSBrick.name=Trasig korrupt spöklik tegelsten
+item.purifiedSoul.name=Renad själsand
+item.swiftDust.name=Kvickdamm
+item.shineDust.name=Skinande damm
+item.loveLetter.name=Kärleksbrev
+item.hateMail.name=Hatbrev
+
+tile.spectralBrickBlock.name=Spöklik tegelsten
+tile.csBrickBlock.name=Korrupt tegelsten
+
+entity.renkin42swt.torturedSoul.name=Torterad själ
+entity.renkin42swt.corruptedSoul.name=Korrupt själ
+entity.renkin42swt.helpfulSoul.name=Hjälpsam själ
