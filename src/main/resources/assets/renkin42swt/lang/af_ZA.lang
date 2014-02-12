@@ -1,0 +1,29 @@
+//Contributed by JinJanODWan
+
+item.sandPile.name=Hoop Sand
+item.soulSandPile.name=Hoop Sielsand
+item.rock.name=Klip
+item.snowballRock.name=Klip in 'n Sneeubal
+item.ectoplasm.name=Ektoplasma
+item.spectralBrick.name=Spookbaksteen
+item.brokenBrick.name=Gebreekte Baksteen
+item.brokenNetherBrick.name=Gebreekte Doderyk Baksteen
+item.brokenSpectralBrick.name=Gebreekte Spookbaksteen
+item.dynamite.name=Stokkie Dinamiet
+item.dynamiteSnowball.name=Stokkie Dinamiet in 'n Sneeubal
+item.fungusSpore.name=Swamspore
+item.corruptedEctoplasm.name=Bedorwe Ektoplasma
+item.corruptedSpectralBrick.name=Bedorwe Spookbaksteen
+item.brokenCSBrick.name=Gebreekte Bedorwe Spookbaksteen
+item.purifiedSoul.name=Gesuiwerde Sielsand
+item.swiftDust.name=Snelstof
+item.shineDust.name=Skynstof
+item.loveLetter.name=Liefdesbrief
+item.hateMail.name=Haatpos
+
+tile.spectralBrickBlock.name=Spookbakstene
+tile.csBrickBlock.name=Bedorwe Spookbakstene
+
+entity.renkin42swt.torturedSoul.name=Gemartelde Siel
+entity.renkin42swt.corruptedSoul.name=Bedorwe Siel
+entity.renkin42swt.helpfulSoul.name=Behulpsame Siel
