@@ -1,10 +1,10 @@
+//Contributed by NightKosh
+
 item.sandPile.name=Горстка песка
 item.soulSandPile.name=Горстка песка душ
 item.rock.name=Камень
 item.snowballRock.name=Снежок с камнем
 item.ectoplasm.name=Эктоплазма
-//Contributed by NightKosh
-
 item.spectralBrick.name=Спектральный кирпич
 item.brokenBrick.name=Сломанный кирпич
 item.brokenNetherBrick.name=Сломанный адский кирпич
