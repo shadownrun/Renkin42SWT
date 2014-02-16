@@ -1,22 +1,23 @@
 //Contributed by The_Flo_96
+//Edited by RustyXXL
 
 item.sandPile.name=Sandhaufen
 item.soulSandPile.name=Seelensandhaufen
-item.rock.name=Fels
-item.snowballRock.name=Schneeball mit einem Stein drin 
+item.rock.name=Stein
+item.snowballRock.name=Stein im Schneeball
 item.ectoplasm.name=Ektoplasma
-item.spectralBrick.name=Spektral Ziegel
+item.spectralBrick.name=Spektralziegel
 item.brokenBrick.name=brüchiger Ziegel
 item.brokenNetherBrick.name=brüchiger Netherziegel
 item.brokenSpectralBrick.name=brüchiger Spektralziegel
 item.dynamite.name=Dynamitstange
-item.dynamiteSnowball.name=Schneeball mit einer Dynamitstange drin
+item.dynamiteSnowball.name=Dynamitstange im Schneeball
 item.fungusSpore.name=Pilzsporen
 item.corruptedEctoplasm.name=verdorbenes Ektoplasma
 item.corruptedSpectralBrick.name=verdorbener Spektralziegel
 item.brokenCSBrick.name=brüchiger verdorbener Spektralziegel
 item.purifiedSoul.name=gereinigter Seelensand
-item.swiftDust.name=Geschwindigkeits Staub
+item.swiftDust.name=Geschwindigkeitsstaub
 item.shineDust.name=glänzender Staub
 item.loveLetter.name=Liebesbrief
 item.hateMail.name=Hassbrief
