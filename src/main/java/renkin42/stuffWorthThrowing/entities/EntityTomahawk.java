@@ -1,15 +1,17 @@
 package renkin42.stuffWorthThrowing.entities;
 
+import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class EntityTomahawk extends EntityThrowable {
 
 	private byte strength;
-	public String tomahawkName;
+	private String tomahawkName;
 	
 	public EntityTomahawk(World par1World) {
 		super(par1World);
@@ -34,6 +36,10 @@ public class EntityTomahawk extends EntityThrowable {
 		if (par1MovingObjectPosition.entityHit != null) {
 			par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), this.strength);
 		}
+	}
+	
+	public String getTomahawkTextureString() {
+		return "textures/items/tomahawk_" + tomahawkName + ".png";
 	}
 
 }
