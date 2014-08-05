@@ -19,6 +19,7 @@ import renkin42.stuffWorthThrowing.entities.EntityShineDust;
 import renkin42.stuffWorthThrowing.entities.EntitySnowballRock;
 import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
 import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
+import renkin42.stuffWorthThrowing.entities.EntityTomahawk;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import net.minecraft.entity.Entity;
@@ -86,6 +87,7 @@ public class StuffWorthThrowing {
 		EntityRegistry.registerModEntity(EntityShineDust.class, "shineDust", 226, this, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityLoveLetter.class, "loveLetter", 227, this, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityHateMail.class, "hateMail", 228, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityTomahawk.class, "tomahawk", 229, this, 64, 1, true);
 
 		EntityEgg(EntityTorturedSoul.class, 0x007f60, 0x1a4139);
 		EntityEgg(EntityCorruptedSoul.class, 0xb33c3c, 0x491818);

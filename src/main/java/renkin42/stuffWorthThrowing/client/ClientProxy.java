@@ -23,6 +23,7 @@ import renkin42.stuffWorthThrowing.entities.EntityShineDust;
 import renkin42.stuffWorthThrowing.entities.EntitySnowballRock;
 import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
 import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
+import renkin42.stuffWorthThrowing.entities.EntityTomahawk;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -60,6 +61,7 @@ public class ClientProxy extends CommonProxy {
             RenderingRegistry.registerEntityRenderingHandler(EntityTorturedSoul.class, new RenderTorturedSoul("torturedSoul"));
             RenderingRegistry.registerEntityRenderingHandler(EntityCorruptedSoul.class, new RenderTorturedSoul("corruptedSoul"));
             RenderingRegistry.registerEntityRenderingHandler(EntityHelpfulSoul.class, new RenderTorturedSoul("helpfulSoul"));
+            RenderingRegistry.registerEntityRenderingHandler(EntityTomahawk.class, new RenderTomahawk());
             
     }
 

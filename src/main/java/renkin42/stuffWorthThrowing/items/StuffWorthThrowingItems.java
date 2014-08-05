@@ -25,6 +25,7 @@ public class StuffWorthThrowingItems {
 	public static Item shineDust;
 	public static Item loveLetter;
 	public static Item hateMail;
+	public static Item tomahawkWooden;
 	
 	public StuffWorthThrowingItems() {
 		
@@ -48,6 +49,7 @@ public class StuffWorthThrowingItems {
     	shineDust = new ItemShineDust("shineDust");
     	loveLetter = new ItemLoveLetter("loveLetter");
     	hateMail = new ItemHateMail("hateMail");
+    	tomahawkWooden = new ItemTomahawk("tomahawk_wood",(byte) 1);
     	
     	GameRegistry.registerItem(sandPile, "sand_pile");
     	GameRegistry.registerItem(soulSandPile, "soul_sand_pile");
@@ -69,6 +71,7 @@ public class StuffWorthThrowingItems {
     	GameRegistry.registerItem(shineDust, "shine_dust");
     	GameRegistry.registerItem(loveLetter, "love_letter");
     	GameRegistry.registerItem(hateMail, "hate_mail");
+    	GameRegistry.registerItem(tomahawkWooden, "tomahawk_wood");
     	
 	}
 

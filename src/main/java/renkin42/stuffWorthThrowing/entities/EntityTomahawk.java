@@ -39,7 +39,7 @@ public class EntityTomahawk extends EntityThrowable {
 	}
 	
 	public String getTomahawkTextureString() {
-		return "textures/items/tomahawk_" + tomahawkName + ".png";
+		return "textures/items/" + tomahawkName + ".png";
 	}
 
 }
