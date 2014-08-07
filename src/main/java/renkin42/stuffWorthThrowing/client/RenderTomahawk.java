@@ -34,8 +34,11 @@ public class RenderTomahawk extends Render {
 		GL11.glPushMatrix();
 		this.bindEntityTexture(entity);
 		GL11.glTranslatef((float)velX, (float)velY, (float)velZ);
+		GL11.glTranslatef(.5f, .5f, .5f);
 		GL11.glRotatef(yaw+90, 0.0f, 1.0f, 0.0f);
-		GL11.glRotatef(-velTot*20, 0.0f, 0.0f, 1.0f);
+		GL11.glRotatef(pitch, 0.0f, 0.0f, 1.0f);
+		GL11.glRotatef(-velTot*50, 0.0f, 0.0f, 1.0f);
+		GL11.glTranslatef(-.5f, -.5f, -.5f);
 		ItemRenderer.renderItemIn2D(tesselator, 1.0f, 0.0f, 0.0f, 1.0f, width, height, 0.0625F);
 		GL11.glPopMatrix();
 		

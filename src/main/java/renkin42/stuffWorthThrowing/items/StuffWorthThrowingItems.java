@@ -26,6 +26,10 @@ public class StuffWorthThrowingItems {
 	public static Item loveLetter;
 	public static Item hateMail;
 	public static Item tomahawkWooden;
+	public static Item tomahawkStone;
+	public static Item tomahawkIron;
+	public static Item tomahawkGold;
+	public static Item tomahawkDiamond;
 	
 	public StuffWorthThrowingItems() {
 		
@@ -49,7 +53,11 @@ public class StuffWorthThrowingItems {
     	shineDust = new ItemShineDust("shineDust");
     	loveLetter = new ItemLoveLetter("loveLetter");
     	hateMail = new ItemHateMail("hateMail");
-    	tomahawkWooden = new ItemTomahawk("tomahawk_wood",(byte) 1);
+    	tomahawkWooden = new ItemTomahawk("tomahawkWood",(byte)1);
+    	tomahawkStone = new ItemTomahawk("tomahawkStone",(byte)2);
+    	tomahawkIron = new ItemTomahawk("tomahawkIron",(byte)3);
+    	tomahawkGold = new ItemTomahawk("tomahawkGold",(byte)4);
+    	tomahawkDiamond = new ItemTomahawk("tomahawkDiamond",(byte)5);
     	
     	GameRegistry.registerItem(sandPile, "sand_pile");
     	GameRegistry.registerItem(soulSandPile, "soul_sand_pile");
@@ -72,6 +80,10 @@ public class StuffWorthThrowingItems {
     	GameRegistry.registerItem(loveLetter, "love_letter");
     	GameRegistry.registerItem(hateMail, "hate_mail");
     	GameRegistry.registerItem(tomahawkWooden, "tomahawk_wood");
+    	GameRegistry.registerItem(tomahawkStone, "tomahawk_stone");
+    	GameRegistry.registerItem(tomahawkIron, "tomahawk_iron");
+    	GameRegistry.registerItem(tomahawkGold, "tomahawk_gold");
+    	GameRegistry.registerItem(tomahawkDiamond, "tomahawk_diamond");
     	
 	}
 
