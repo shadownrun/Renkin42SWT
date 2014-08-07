@@ -1,20 +1,18 @@
 package renkin42.stuffWorthThrowing.client;
 
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.texture.TextureManager;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import renkin42.stuffWorthThrowing.entities.EntityTomahawk;
+import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 
 public class RenderTomahawk extends Render {
 
@@ -27,21 +25,18 @@ public class RenderTomahawk extends Render {
 	public void renderTomahawk(EntityTomahawk entity, double velX, double velY, double velZ, float f, float f1) {
 		float velTot = (float)MathHelper.sqrt_double(velX * velX + velY * velY + velZ * velZ);
 		float pitch = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * f1;
-		float yaw = -entity.prevRotationYaw - (entity.rotationYaw - entity.prevRotationYaw) * f1 - 180.0F;
+		float yaw = entity.prevRotationYaw + (entity.rotationYaw - entity.prevRotationYaw) * f1 - 180.0F;
 		this.tomahawkTexture = entity.getTomahawkTextureString();
 		Tessellator tesselator = Tessellator.instance;
-		TextureManager texturemanager = Minecraft.getMinecraft().getTextureManager();
-		ResourceLocation resourcelocation = this.getEntityTexture(entity);
-		IIcon icon = ((TextureMap)texturemanager.getTexture(resourcelocation)).getAtlasSprite("missingno");
-		float minU = icon.getMinU();
-		float maxU = icon.getMaxU();
-		float minV = icon.getMinV();
-		float maxV = icon.getMaxV();
+		IIcon icon = new ItemStack(StuffWorthThrowingItems.tomahawkWooden).getIconIndex();
 		int width = icon.getIconWidth();
 		int height = icon.getIconHeight();
 		GL11.glPushMatrix();
-		this.bindTexture(resourcelocation);
-		ItemRenderer.renderItemIn2D(tesselator, maxU, minV, maxV, minU, width, height, 0.0625F);
+		this.bindEntityTexture(entity);
+		GL11.glTranslatef((float)velX, (float)velY, (float)velZ);
+		GL11.glRotatef(yaw+90, 0.0f, 1.0f, 0.0f);
+		GL11.glRotatef(-velTot*20, 0.0f, 0.0f, 1.0f);
+		ItemRenderer.renderItemIn2D(tesselator, 1.0f, 0.0f, 0.0f, 1.0f, width, height, 0.0625F);
 		GL11.glPopMatrix();
 		
 	}

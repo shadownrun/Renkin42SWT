@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 public class EntityTomahawk extends EntityThrowable {
 
 	private byte strength;
-	private String tomahawkName;
+	public String tomahawkName;
 	
 	public EntityTomahawk(World par1World) {
 		super(par1World);
@@ -39,7 +39,7 @@ public class EntityTomahawk extends EntityThrowable {
 	}
 	
 	public String getTomahawkTextureString() {
-		return "textures/items/" + tomahawkName + ".png";
+		return "textures/items/" + "tomahawk_wood" + ".png";
 	}
 
 }
