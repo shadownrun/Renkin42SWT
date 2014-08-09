@@ -20,7 +20,8 @@ import net.minecraft.world.World;
 public class EntityCorruptedSoul extends EntityMob {
 
 	/** Random offset used in floating behaviour */
-    private float heightOffset = 0.5F;
+    @SuppressWarnings("unused")
+	private float heightOffset = 0.5F; //Not Sure if this is used or not, leaving it just in case.
     
     /** ticks until heightOffset is randomized */
     private int heightOffsetUpdateTime;

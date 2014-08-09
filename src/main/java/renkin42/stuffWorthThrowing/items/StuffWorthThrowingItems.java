@@ -53,11 +53,11 @@ public class StuffWorthThrowingItems {
     	shineDust = new ItemShineDust("shineDust");
     	loveLetter = new ItemLoveLetter("loveLetter");
     	hateMail = new ItemHateMail("hateMail");
-    	tomahawkWooden = new ItemTomahawk("tomahawkWood",(byte)1);
-    	tomahawkStone = new ItemTomahawk("tomahawkStone",(byte)2);
-    	tomahawkIron = new ItemTomahawk("tomahawkIron",(byte)3);
-    	tomahawkGold = new ItemTomahawk("tomahawkGold",(byte)4);
-    	tomahawkDiamond = new ItemTomahawk("tomahawkDiamond",(byte)5);
+    	tomahawkWooden = new ItemTomahawk("tomahawkWood",(byte)5, 59);
+    	tomahawkStone = new ItemTomahawk("tomahawkStone",(byte)7, 131);
+    	tomahawkIron = new ItemTomahawk("tomahawkIron",(byte)11, 250);
+    	tomahawkGold = new ItemTomahawk("tomahawkGold",(byte)12, 32);
+    	tomahawkDiamond = new ItemTomahawk("tomahawkDiamond",(byte)16, 1561);
     	
     	GameRegistry.registerItem(sandPile, "sand_pile");
     	GameRegistry.registerItem(soulSandPile, "soul_sand_pile");
