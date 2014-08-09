@@ -10,13 +10,13 @@ import net.minecraft.world.IBlockAccess;
 
 public class BlockSpectralBrick extends Block {
 
-	public BlockSpectralBrick(Material par2Material, String unlocalizedName) {
+	public BlockSpectralBrick(Material par2Material, String unlocalizedName, float lightLevel) {
 		super(par2Material);
 		setCreativeTab(CreativeTabs.tabBlock);
 		setBlockName(unlocalizedName);
 		setHardness(2.5F);
 		setResistance(500.0F);
-		setLightLevel(0.5F);
+		setLightLevel(lightLevel);
 		setStepSound(soundTypeStone);
 		setBlockTextureName(StuffWorthThrowing.mod_id + ":" + unlocalizedName);
 	}
@@ -40,9 +40,8 @@ public class BlockSpectralBrick extends Block {
     public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
 		Block block = par1IBlockAccess.getBlock(par2, par3, par4);
-		Block block1 = StuffWorthThrowingBlocks.csBrickBlock;
 		boolean render = super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
-		return true && block == this ? false : render && block == block1 ? false : render;
+		return true && block instanceof BlockSpectralBrick ? false : render;
     }
 	
 	@Override

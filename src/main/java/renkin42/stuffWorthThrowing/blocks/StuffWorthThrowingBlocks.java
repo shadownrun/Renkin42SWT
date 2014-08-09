@@ -11,8 +11,8 @@ public class StuffWorthThrowingBlocks {
 	
 	public StuffWorthThrowingBlocks() {
 		
-		spectralBrickBlock = new BlockSpectralBrick(Material.rock, "spectralBrickBlock");
-		csBrickBlock = new BlockCorruptedSpectralBrick(Material.rock, "csBrickBlock");
+		spectralBrickBlock = new BlockSpectralBrick(Material.rock, "spectralBrickBlock", 0.5f);
+		csBrickBlock = new BlockSpectralBrick(Material.rock, "csBrickBlock", 0.5f);
     	
     	GameRegistry.registerBlock(spectralBrickBlock, "spectral_brick_block");
     	GameRegistry.registerBlock(csBrickBlock, "cs_brick_block");
