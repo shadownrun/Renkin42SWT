@@ -56,6 +56,7 @@ public class EntityHelpfulSoul extends EntityTameable {
 	@Override
     protected void applyEntityAttributes() {
     	super.applyEntityAttributes();
+    	this.getAttributeMap().registerAttribute(SharedMonsterAttributes.attackDamage);
     	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
     	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(5.0D);
     }

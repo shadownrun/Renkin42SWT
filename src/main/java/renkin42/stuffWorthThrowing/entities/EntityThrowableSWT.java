@@ -11,10 +11,10 @@ import net.minecraft.world.World;
 
 public class EntityThrowableSWT extends EntityThrowable {
 
-	private static String itemName;
+	private static String itemName; //Not sure this static fixes things, but it does, deal with it.
 	private int itemType;
 	private int effect;
-	private String particle;
+	private static String particle;
 	
 	public EntityThrowableSWT(World par1World) {
 		super(par1World);
@@ -28,7 +28,7 @@ public class EntityThrowableSWT extends EntityThrowable {
 	 *itemName = the item's unlocalized name
 	 *itemType = 0 for regular debuffs, 1 for flaming bricks, 2 for bricks, 3 rocks, 4 for buffs
 	 *effect = Potion effect. Use 0 for no effect
-	 *setsFire = Whether the item causes fires*/
+	 *particle = Particle type spawned on impact*/
 	@SuppressWarnings("static-access")
 	public EntityThrowableSWT(World par1World, EntityLivingBase par2EntityLivingBase, String itemName, int itemType, int effect, String particle) {
 		super(par1World, par2EntityLivingBase);
@@ -42,6 +42,7 @@ public class EntityThrowableSWT extends EntityThrowable {
 		super(par1World, par2, par4, par6);
 	}
 
+	@SuppressWarnings("static-access")
 	@Override
 	protected void onImpact(MovingObjectPosition var1) {
 		if (var1.entityHit != null) {
@@ -72,7 +73,7 @@ public class EntityThrowableSWT extends EntityThrowable {
 					if (StuffWorthThrowingConfig.dizzyBricks) {
 						entityLiving.addPotionEffect(new PotionEffect(Potion.confusion.getId(), i2 * i3, 0));
 					}
-					if (effect >= 0) {
+					if (effect > 0) {
 						entityLiving.addPotionEffect(new PotionEffect(effect, i2 * i4, 0));
 					}
 				}
@@ -88,7 +89,7 @@ public class EntityThrowableSWT extends EntityThrowable {
 		}
 		
 		for (int i = 0; i < 8; ++i) {
-            this.worldObj.spawnParticle(particle, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+            this.worldObj.spawnParticle(this.particle, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
         }
 
         if (!this.worldObj.isRemote) {

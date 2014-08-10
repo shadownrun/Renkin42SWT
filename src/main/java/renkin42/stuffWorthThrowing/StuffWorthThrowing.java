@@ -1,24 +1,16 @@
 package renkin42.stuffWorthThrowing;
 
 import renkin42.stuffWorthThrowing.blocks.StuffWorthThrowingBlocks;
-import renkin42.stuffWorthThrowing.entities.EntityBrokenBrick;
-import renkin42.stuffWorthThrowing.entities.EntityBrokenCSBrick;
-import renkin42.stuffWorthThrowing.entities.EntityBrokenNetherBrick;
-import renkin42.stuffWorthThrowing.entities.EntityBrokenSpectralBrick;
 import renkin42.stuffWorthThrowing.entities.EntityCorruptedSoul;
 import renkin42.stuffWorthThrowing.entities.EntityDynamite;
 import renkin42.stuffWorthThrowing.entities.EntityDynamiteSnowball;
-import renkin42.stuffWorthThrowing.entities.EntityFungusSpore;
 import renkin42.stuffWorthThrowing.entities.EntityHateMail;
 import renkin42.stuffWorthThrowing.entities.EntityHelpfulSoul;
 import renkin42.stuffWorthThrowing.entities.EntityLoveLetter;
 import renkin42.stuffWorthThrowing.entities.EntityPurifiedSoul;
-import renkin42.stuffWorthThrowing.entities.EntityRock;
-import renkin42.stuffWorthThrowing.entities.EntitySandPile;
-import renkin42.stuffWorthThrowing.entities.EntityShineDust;
 import renkin42.stuffWorthThrowing.entities.EntitySnowballRock;
 import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
-import renkin42.stuffWorthThrowing.entities.EntitySwiftDust;
+import renkin42.stuffWorthThrowing.entities.EntityThrowableSWT;
 import renkin42.stuffWorthThrowing.entities.EntityTomahawk;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
 import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
@@ -66,27 +58,19 @@ public class StuffWorthThrowing {
 	public void load(FMLInitializationEvent event) {
 		
 		new StuffWorthThrowingRecipes();
-
-		EntityRegistry.registerModEntity(EntitySandPile.class, "sandPile", 210, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntitySoulSandPile.class, "soulSandPile", 211, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityRock.class, "rock", 212, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntitySnowballRock.class, "snowballRock", 213, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityTorturedSoul.class, "torturedSoul", 214, this, 32, 1, true);
-		EntityRegistry.registerModEntity(EntityBrokenBrick.class, "brokenBrick", 215, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityBrokenNetherBrick.class, "brokenNetherBrick", 216, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityBrokenSpectralBrick.class, "brokenSpectralBrick", 217, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityDynamite.class, "dynamite", 218, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityDynamiteSnowball.class, "dynamiteSnowball", 219, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityFungusSpore.class, "fungusSpore", 220, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityCorruptedSoul.class, "corruptedSoul", 221, this, 32, 1, true);
-		EntityRegistry.registerModEntity(EntityHelpfulSoul.class, "helpfulSoul", 222, this, 32, 1, true);
-		EntityRegistry.registerModEntity(EntityPurifiedSoul.class, "purifiedSoul", 223, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityBrokenCSBrick.class, "brokenCSBrick", 224, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntitySwiftDust.class, "swiftDust", 225, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityShineDust.class, "shineDust", 226, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityLoveLetter.class, "loveLetter", 227, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityHateMail.class, "hateMail", 228, this, 64, 1, true);
-		EntityRegistry.registerModEntity(EntityTomahawk.class, "tomahawk", 229, this, 64, 1, true);
+		
+		EntityRegistry.registerModEntity(EntitySoulSandPile.class, "soulSandPile", 210, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntitySnowballRock.class, "snowballRock", 211, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityTorturedSoul.class, "torturedSoul", 212, this, 32, 1, true);
+		EntityRegistry.registerModEntity(EntityDynamite.class, "dynamite", 213, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityDynamiteSnowball.class, "dynamiteSnowball", 214, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityCorruptedSoul.class, "corruptedSoul", 215, this, 32, 1, true);
+		EntityRegistry.registerModEntity(EntityHelpfulSoul.class, "helpfulSoul", 216, this, 32, 1, true);
+		EntityRegistry.registerModEntity(EntityPurifiedSoul.class, "purifiedSoul", 217, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityLoveLetter.class, "loveLetter", 218, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityHateMail.class, "hateMail", 219, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityTomahawk.class, "tomahawk", 220, this, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityThrowableSWT.class, "thrownItem", 221, this, 64, 1, true);
 
 		EntityEgg(EntityTorturedSoul.class, 0x007f60, 0x1a4139);
 		EntityEgg(EntityCorruptedSoul.class, 0xb33c3c, 0x491818);

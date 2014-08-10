@@ -1,6 +1,8 @@
 package renkin42.stuffWorthThrowing.items;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Potion;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class StuffWorthThrowingItems {
@@ -33,24 +35,24 @@ public class StuffWorthThrowingItems {
 	
 	public StuffWorthThrowingItems() {
 		
-		sandPile = new ItemSandPile("sandPile");
+		sandPile = new ItemThrowableSWT("sandPile", 0, Potion.blindness.getId(), "crit", CreativeTabs.tabMaterials);
     	soulSandPile = new ItemSoulSandPile("soulSandPile");
-    	rock = new ItemRock("rock");
+    	rock = new ItemThrowableSWT("rock", 3, 0, "smoke", CreativeTabs.tabMaterials);
     	snowballRock = new ItemSnowballRock("snowballRock");
     	ectoplasm = new ItemNormal("ectoplasm");
     	spectralBrick = new ItemNormal("spectralBrick");
-    	brokenBrick = new ItemBrokenBrick("brokenBrick");
-    	brokenNetherBrick = new ItemBrokenNetherBrick("brokenNetherBrick");
-    	brokenSpectralBrick = new ItemBrokenSpectralBrick("brokenSpectralBrick");
+    	brokenBrick = new ItemThrowableSWT("brokenBrick", 2, 0, "smoke", CreativeTabs.tabMisc);
+    	brokenNetherBrick = new ItemThrowableSWT("brokenNetherBrick", 1, 0, "smoke", CreativeTabs.tabMisc);
+    	brokenSpectralBrick = new ItemThrowableSWT("brokenSpectralBrick", 2, Potion.weakness.getId(), "smoke", CreativeTabs.tabMisc);
     	dynamite = new ItemDynamite("dynamite");
     	dynamiteSnowball = new ItemDynamiteSnowball("dynamiteSnowball");
-    	fungusSpore = new ItemFungusSpore("fungusSpore");
+    	fungusSpore = new ItemThrowableSWT("fungusSpore", 0, Potion.poison.getId(), "magicCrit", CreativeTabs.tabMisc);
     	corruptedEctoplasm = new ItemNormal("corruptedEctoplasm");
     	corruptedSpectralBrick = new ItemNormal("corruptedSpectralBrick");
-    	brokenCSBrick = new ItemBrokenCSBrick("brokenCSBrick");
+    	brokenCSBrick = new ItemThrowableSWT("brokenCSBrick", 2, Potion.wither.getId(), "crit", CreativeTabs.tabMisc);
     	purifiedSoul = new ItemPurifiedSoul("purifiedSoul");
-    	swiftDust = new ItemSwiftDust("swiftDust");
-    	shineDust = new ItemShineDust("shineDust");
+    	swiftDust = new ItemThrowableSWT("swiftDust", 4, Potion.moveSpeed.getId(), "magicCrit", CreativeTabs.tabMisc);
+    	shineDust = new ItemThrowableSWT("shineDust", 4, Potion.nightVision.getId(), "crit", CreativeTabs.tabMisc);
     	loveLetter = new ItemLoveLetter("loveLetter");
     	hateMail = new ItemHateMail("hateMail");
     	tomahawkWooden = new ItemTomahawk("tomahawkWood",(byte)5, 59);
