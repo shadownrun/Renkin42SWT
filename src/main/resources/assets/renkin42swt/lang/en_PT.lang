@@ -18,9 +18,18 @@ item.swiftDust.name=Handfull o' Speedy Stuff
 item.shineDust.name=Handfull o' Shiny Stuff
 item.loveLetter.name=Fanciful Letter
 item.hateMail.name=Letter of Marque
+item.tomahawkWood.name=Timber Throwin' Hatchet
+item.tomahawkStone.name=Throwin' Hatchet o' Rock
+item.tomahawkIron.name=Throwin' Hatchet o' Iron
+item.tomahawkGold.name=Throwin' Hatchet o' Gold
+item.tomahawkDiamond.name=Bejewelled Throwin' Hatchet
 
 tile.spectralBrickBlock.name=Bricks o' Davy Jones
 tile.csBrickBlock.name=Evil Bricks o' Davy Jones
+tile.spectralBrickStairs.name=Brick Stairway o' Davy Jones
+tile.csBrickStairs.name=Evil Brick Stairway o' Davy Jones
+tile.spectralBrickSlab.name=Brick Slab o' Davy Jones
+tile.csBrickSlab.name=Evil Brick Slab o' Davy Jones
 
 entity.renkin42swt.torturedSoul.name=Swabbie o' Davy Jones
 entity.renkin42swt.corruptedSoul.name=Evil Swabbie o' Davy Jones

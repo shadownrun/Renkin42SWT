@@ -18,9 +18,18 @@ item.swiftDust.name=Swift Dust
 item.shineDust.name=Shine Dust
 item.loveLetter.name=Love Letter
 item.hateMail.name=Hate Mail
+item.tomahawkWood.name=Wooden Tomahawk
+item.tomahawkStone.name=Stone Tomahawk
+item.tomahawkIron.name=Iron Tomahawk
+item.tomahawkGold.name=Golden Tomahawk
+item.tomahawkDiamond.name=Diamond Tomahawk
 
 tile.spectralBrickBlock.name=Spectral Bricks
 tile.csBrickBlock.name=Corrupted Spectral Bricks
+tile.spectralBrickStairs.name=Spectral Brick Stairs
+tile.csBrickStairs.name=Corrupted Spectral Brick Stairs
+tile.spectralBrickSlab.name=Spectral Brick Slab
+tile.csBrickSlab.name=Corrupted Spectral Brick Slab
 
 entity.renkin42swt.torturedSoul.name=Tortured Soul
 entity.renkin42swt.corruptedSoul.name=Corrupted Soul
