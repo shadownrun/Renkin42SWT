@@ -5,6 +5,7 @@ import renkin42.stuffWorthThrowing.items.StuffWorthThrowingItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class StuffWorthThrowingRecipes {
@@ -31,9 +32,18 @@ public class StuffWorthThrowingRecipes {
 		ItemStack shineDustStack = new ItemStack(StuffWorthThrowingItems.shineDust);
 		ItemStack loveLetterStack = new ItemStack(StuffWorthThrowingItems.loveLetter);
 		ItemStack hateMailStack = new ItemStack(StuffWorthThrowingItems.hateMail);
+		ItemStack woodTomahawkStack = new ItemStack(StuffWorthThrowingItems.tomahawkWooden);
+		ItemStack stoneTomahawkStack = new ItemStack(StuffWorthThrowingItems.tomahawkStone);
+		ItemStack ironTomahawkStack = new ItemStack(StuffWorthThrowingItems.tomahawkIron);
+		ItemStack goldTomahawkStack = new ItemStack(StuffWorthThrowingItems.tomahawkGold);
+		ItemStack diamondTomahawkStack = new ItemStack(StuffWorthThrowingItems.tomahawkDiamond);
 
 		ItemStack spectralBrickBlockStack = new ItemStack(StuffWorthThrowingBlocks.spectralBrickBlock);
 		ItemStack csBrickBlockStack = new ItemStack(StuffWorthThrowingBlocks.csBrickBlock);
+		ItemStack spectralBrickStairStack = new ItemStack(StuffWorthThrowingBlocks.spectralBrickStairs, 4);
+		ItemStack csBrickStairStack = new ItemStack(StuffWorthThrowingBlocks.csBrickStairs, 4);
+		ItemStack spectralBrickSlabStack = new ItemStack(StuffWorthThrowingBlocks.spectralBrickSlab, 6);
+		ItemStack csBrickSlabStack = new ItemStack(StuffWorthThrowingBlocks.csBrickSlab, 6);
 
 		ItemStack sandPileOutputStack = new ItemStack(StuffWorthThrowingItems.sandPile, 4);
 		ItemStack soulSandPileOutputStack = new ItemStack(StuffWorthThrowingItems.soulSandPile, 4);
@@ -54,6 +64,11 @@ public class StuffWorthThrowingRecipes {
 		ItemStack glowstoneStack = new ItemStack(Items.glowstone_dust);
 		ItemStack paperStack = new ItemStack(Items.paper);
 		ItemStack inkStack = new ItemStack(Items.dye, 1, 0);
+		ItemStack stickStack = new ItemStack(Items.stick);
+		ItemStack stoneStack = new ItemStack(Blocks.cobblestone);
+		ItemStack ironStack = new ItemStack(Items.iron_ingot);
+		ItemStack goldStack = new ItemStack(Items.gold_ingot);
+		ItemStack diamondStack = new ItemStack(Items.diamond);
 
 		GameRegistry.addShapelessRecipe(sandPileOutputStack, sandStack);
 		GameRegistry.addShapelessRecipe(soulSandPileOutputStack, soulSandStack);
@@ -82,6 +97,15 @@ public class StuffWorthThrowingRecipes {
 		GameRegistry.addRecipe(spectralBrickBlockStack, "aa", "aa", 'a', spectralBrickStack);
 		GameRegistry.addRecipe(tntStack, "bb", "bb", 'b', dynamiteStack);
 		GameRegistry.addRecipe(csBrickBlockStack, "cc", "cc", 'c', csBrickStack);
+		GameRegistry.addRecipe(spectralBrickStairStack, "  d", " dd", "ddd", 'd', spectralBrickBlockStack);
+		GameRegistry.addRecipe(csBrickStairStack, "  e", " ee", "eee", 'e', csBrickBlockStack);
+		GameRegistry.addRecipe(spectralBrickSlabStack, "fff", 'f', spectralBrickBlockStack);
+		GameRegistry.addRecipe(csBrickSlabStack, "ggg", 'g', csBrickBlockStack);
+		GameRegistry.addRecipe(new ShapedOreRecipe(woodTomahawkStack, " hh", " i ", "i  ", 'h', "plankWood", 'i', stickStack));
+		GameRegistry.addRecipe(stoneTomahawkStack, " jj", " k ", "k  ", 'j', stoneStack, 'k', stickStack);
+		GameRegistry.addRecipe(ironTomahawkStack, " ll", " m ", "m  ", 'l', ironStack, 'm', stickStack);
+		GameRegistry.addRecipe(goldTomahawkStack, " nn", " o ", "o  ", 'n', goldStack, 'o', stickStack);
+		GameRegistry.addRecipe(diamondTomahawkStack, " pp", " q ", "q  ", 'p', diamondStack, 'q', stickStack);
 
 		GameRegistry.addSmelting(StuffWorthThrowingItems.soulSandPile, ectoplasmStack, 5);
 		GameRegistry.addSmelting(StuffWorthThrowingItems.corruptedEctoplasm, ectoplasmStack, 5);
