@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "172.a"
+version = "172.1121.2.0"
 group= "com.renkin42.renkin42swt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Renkin42SWT"
 
