@@ -1,6 +1,8 @@
 package renkin42.stuffWorthThrowing.items;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Potion;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class StuffWorthThrowingItems {
@@ -25,29 +27,39 @@ public class StuffWorthThrowingItems {
 	public static Item shineDust;
 	public static Item loveLetter;
 	public static Item hateMail;
+	public static Item tomahawkWooden;
+	public static Item tomahawkStone;
+	public static Item tomahawkIron;
+	public static Item tomahawkGold;
+	public static Item tomahawkDiamond;
 	
 	public StuffWorthThrowingItems() {
 		
-		sandPile = new ItemSandPile("sandPile");
+		sandPile = new ItemThrowableSWT("sandPile", 0, Potion.blindness.getId(), "crit", CreativeTabs.tabMaterials);
     	soulSandPile = new ItemSoulSandPile("soulSandPile");
-    	rock = new ItemRock("rock");
+    	rock = new ItemThrowableSWT("rock", 3, 0, "smoke", CreativeTabs.tabMaterials);
     	snowballRock = new ItemSnowballRock("snowballRock");
     	ectoplasm = new ItemNormal("ectoplasm");
     	spectralBrick = new ItemNormal("spectralBrick");
-    	brokenBrick = new ItemBrokenBrick("brokenBrick");
-    	brokenNetherBrick = new ItemBrokenNetherBrick("brokenNetherBrick");
-    	brokenSpectralBrick = new ItemBrokenSpectralBrick("brokenSpectralBrick");
+    	brokenBrick = new ItemThrowableSWT("brokenBrick", 2, 0, "smoke", CreativeTabs.tabMisc);
+    	brokenNetherBrick = new ItemThrowableSWT("brokenNetherBrick", 1, 0, "smoke", CreativeTabs.tabMisc);
+    	brokenSpectralBrick = new ItemThrowableSWT("brokenSpectralBrick", 2, Potion.weakness.getId(), "smoke", CreativeTabs.tabMisc);
     	dynamite = new ItemDynamite("dynamite");
     	dynamiteSnowball = new ItemDynamiteSnowball("dynamiteSnowball");
-    	fungusSpore = new ItemFungusSpore("fungusSpore");
+    	fungusSpore = new ItemThrowableSWT("fungusSpore", 0, Potion.poison.getId(), "magicCrit", CreativeTabs.tabMisc);
     	corruptedEctoplasm = new ItemNormal("corruptedEctoplasm");
     	corruptedSpectralBrick = new ItemNormal("corruptedSpectralBrick");
-    	brokenCSBrick = new ItemBrokenCSBrick("brokenCSBrick");
+    	brokenCSBrick = new ItemThrowableSWT("brokenCSBrick", 2, Potion.wither.getId(), "crit", CreativeTabs.tabMisc);
     	purifiedSoul = new ItemPurifiedSoul("purifiedSoul");
-    	swiftDust = new ItemSwiftDust("swiftDust");
-    	shineDust = new ItemShineDust("shineDust");
+    	swiftDust = new ItemThrowableSWT("swiftDust", 4, Potion.moveSpeed.getId(), "magicCrit", CreativeTabs.tabMisc);
+    	shineDust = new ItemThrowableSWT("shineDust", 4, Potion.nightVision.getId(), "crit", CreativeTabs.tabMisc);
     	loveLetter = new ItemLoveLetter("loveLetter");
     	hateMail = new ItemHateMail("hateMail");
+    	tomahawkWooden = new ItemTomahawk("tomahawkWood",(byte)5, 59);
+    	tomahawkStone = new ItemTomahawk("tomahawkStone",(byte)7, 131);
+    	tomahawkIron = new ItemTomahawk("tomahawkIron",(byte)9, 250);
+    	tomahawkGold = new ItemTomahawk("tomahawkGold",(byte)10, 32);
+    	tomahawkDiamond = new ItemTomahawk("tomahawkDiamond",(byte)13, 1561);
     	
     	GameRegistry.registerItem(sandPile, "sand_pile");
     	GameRegistry.registerItem(soulSandPile, "soul_sand_pile");
@@ -69,6 +81,11 @@ public class StuffWorthThrowingItems {
     	GameRegistry.registerItem(shineDust, "shine_dust");
     	GameRegistry.registerItem(loveLetter, "love_letter");
     	GameRegistry.registerItem(hateMail, "hate_mail");
+    	GameRegistry.registerItem(tomahawkWooden, "tomahawk_wood");
+    	GameRegistry.registerItem(tomahawkStone, "tomahawk_stone");
+    	GameRegistry.registerItem(tomahawkIron, "tomahawk_iron");
+    	GameRegistry.registerItem(tomahawkGold, "tomahawk_gold");
+    	GameRegistry.registerItem(tomahawkDiamond, "tomahawk_diamond");
     	
 	}
 

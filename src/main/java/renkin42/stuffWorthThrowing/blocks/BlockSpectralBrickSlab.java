@@ -4,21 +4,30 @@ import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
-public class BlockSpectralBrick extends Block {
+public class BlockSpectralBrickSlab extends BlockSlab {
 
-	public BlockSpectralBrick(Material par2Material, String unlocalizedName, float lightLevel) {
-		super(par2Material);
+	public BlockSpectralBrickSlab(boolean isDouble, String unlocalizedName, String baseBlockName, float lightLevel) {
+		super(isDouble, Material.rock);
 		setCreativeTab(CreativeTabs.tabBlock);
 		setBlockName(unlocalizedName);
 		setHardness(2.5F);
 		setResistance(500.0F);
 		setLightLevel(lightLevel);
 		setStepSound(soundTypeStone);
-		setBlockTextureName(StuffWorthThrowing.mod_id + ":" + unlocalizedName);
+		setBlockTextureName(StuffWorthThrowing.mod_id + ":" + baseBlockName);
+	}
+
+	@Override
+	public String func_150002_b(int var1) {
+		return super.getUnlocalizedName();
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -41,7 +50,7 @@ public class BlockSpectralBrick extends Block {
     {
 		Block block = par1IBlockAccess.getBlock(par2, par3, par4);
 		boolean render = super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
-		return true && block instanceof BlockSpectralBrick ? false : render;
+		return par5 <= 1 ? render: block instanceof BlockSpectralBrick ? false : render;
     }
 	
 	@Override
@@ -53,5 +62,10 @@ public class BlockSpectralBrick extends Block {
     {
         return false;
     }
+	
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z) {
+		return new ItemStack(this);
+	}
 
 }

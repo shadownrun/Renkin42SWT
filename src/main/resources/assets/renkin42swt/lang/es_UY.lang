@@ -1,0 +1,29 @@
+//Contributed by Canichetoy
+
+item.sandPile.name=Pila de arena
+item.soulSandPile.name=Pila de arena de almas
+item.rock.name=Roca
+item.snowballRock.name=Bola de nieve con una roca
+item.ectoplasm.name=Ectoplasma
+item.spectralBrick.name=Ladrillo espectral
+item.brokenBrick.name=Ladrillo Roto
+item.brokenNetherBrick.name=Ladrillo del inframundo roto
+item.brokenSpectralBrick.name=Ladrillo espectral roto
+item.dynamite.name=Unidad de dinamita
+item.dynamiteSnowball.name=Bola de nieve con una unidad de dinamita
+item.fungusSpore.name=Esporas de hongos
+item.corruptedEctoplasm.name=Ectoplasma corrupto
+item.corruptedSpectralBrick.name=Ladrillo espectral corrupto
+item.brokenCSBrick.name=Ladrillo espectral roto y corrupto
+item.purifiedSoul.name=Arena de almas purificada
+item.swiftDust.name=Polvo de rápidez
+item.shineDust.name=Polvo de brillo
+item.loveLetter.name=Carta de amor
+item.hateMail.name=Correo de odio
+
+tile.spectralBrickBlock.name=Ladrillos espectrales
+tile.csBrickBlock.name=Ladrillos espectrales corruptos
+
+entity.renkin42swt.torturedSoul.name=Arena torturada
+entity.renkin42swt.corruptedSoul.name=Arena corrupta
+entity.renkin42swt.helpfulSoul.name=Arena de ayuda

@@ -1,0 +1,29 @@
+//Contributed by NightKosh
+
+item.sandPile.name=Горстка песка
+item.soulSandPile.name=Горстка песка душ
+item.rock.name=Камень
+item.snowballRock.name=Снежок с камнем
+item.ectoplasm.name=Эктоплазма
+item.spectralBrick.name=Спектральный кирпич
+item.brokenBrick.name=Сломанный кирпич
+item.brokenNetherBrick.name=Сломанный адский кирпич
+item.brokenSpectralBrick.name=Сломанный спектральный кирпич
+item.dynamite.name=Динамитная шашка
+item.dynamiteSnowball.name=Снежок с динамитной шашкой
+item.fungusSpore.name=Споры грибов
+item.corruptedEctoplasm.name=Искажённая эктоплазма
+item.corruptedSpectralBrick.name=Искажённый спектральный кирпич
+item.brokenCSBrick.name=Сломанный искажённый спектральный кирпич
+item.purifiedSoul.name=Очищенный песок душ
+item.swiftDust.name=Пыль стремительности
+item.shineDust.name=Пыль сияния
+item.loveLetter.name=Любовное послание
+item.hateMail.name=Письмо с угрозами
+
+tile.spectralBrickBlock.name=Спектральные кирпичи
+tile.csBrickBlock.name=Искажённые спектральные кирпичи
+
+entity.renkin42swt.torturedSoul.name=Измученная душа
+entity.renkin42swt.corruptedSoul.name=Искажённая душа
+entity.renkin42swt.helpfulSoul.name=Добрая душа

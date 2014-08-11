@@ -1,0 +1,29 @@
+//Contributed by SnubMansters
+
+item.sandPile.name=Stos z piasku
+item.soulSandPile.name=Stos z dusza piasku
+item.rock.name=skalny
+item.snowballRock.name=śnieżna kula kamieniem w nim
+item.ectoplasm.name=ektoplazma
+item.spectralBrick.name=Sparkle Cegła
+item.brokenBrick.name=złamany Cegła
+item.brokenNetherBrick.name=złamane diabła cegła
+item.brokenSpectralBrick.name=złamane iskierka cegła
+item.dynamite.name=laska TNT
+item.dynamiteSnowball.name=śnieżna kula laska TNT
+item.fungusSpore.name= paskudny zarodniki
+item.corruptedEctoplasm.name=skorumpowany duch sok
+item.corruptedSpectralBrick.name=skorumpowany  iskierka cegła
+item.brokenCSBrick.name=Broken skorumpowany  iskierka cegła
+item.purifiedSoul.name=Bóg dusza piasek
+item.swiftDust.name=mucha brud
+item.shineDust.name=Shine kurzu
+item.loveLetter.name=Miłość zrobienie
+item.hateMail.name= nienawidzić  ty
+
+tile.spectralBrickBlock.name=iskierka cegła
+tile.csBrickBlock.name=skorumpowany iskierka cegła
+
+entity.renkin42swt.torturedSoul.name=torturowany człowiek
+entity.renkin42swt.corruptedSoul.name=skorumpowany  człowiek
+entity.renkin42swt.helpfulSoul.name=pomagając  człowiek

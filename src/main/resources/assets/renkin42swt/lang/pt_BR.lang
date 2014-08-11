@@ -1,0 +1,29 @@
+//Contributed by Shadownrun
+
+item.sandPile.name=Pilha de Areia
+item.soulSandPile.name=Pilha de Areia de Almas
+item.rock.name=Pedra
+item.snowballRock.name=Bola de Neve com uma pedra dentro
+item.ectoplasm.name=Ectoplasma
+item.spectralBrick.name=Tijolos Epectrais
+item.brokenBrick.name=Tijolos Quebrado
+item.brokenNetherBrick.name=Tijolos do Nether Quebrados
+item.brokenSpectralBrick.name=Tijolos Epectrais Quebrados
+item.dynamite.name=Bastão de Dinamite
+item.dynamiteSnowball.name=Bola de Neve com um Bastão de dinamite
+item.fungusSpore.name=Esporos de Fungos
+item.corruptedEctoplasm.name=Ectoplasma corrompido
+item.corruptedSpectralBrick.name=Tijolos Epectrais corrompidos
+item.brokenCSBrick.name=Tijolos Epectrais Quebrados corrompidos
+item.purifiedSoul.name=Areia de Almas Purificada
+item.swiftDust.name=Pó de Velocidade
+item.shineDust.name=Pó de vizão noturna
+item.loveLetter.name=Carta de Amor
+item.hateMail.name=Correio de Ódio
+
+tile.spectralBrickBlock.name=Tijolos Epectrais
+tile.csBrickBlock.name=Tijolos Epectrais corrompidos
+
+entity.renkin42swt.torturedSoul.name=alma atormentada
+entity.renkin42swt.corruptedSoul.name=Alma corrompida
+entity.renkin42swt.helpfulSoul.name=Alma atenciosa

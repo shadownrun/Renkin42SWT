@@ -1,0 +1,30 @@
+//Contributed by The_Flo_96
+//Edited by RustyXXL
+
+item.sandPile.name=Sandhaufen
+item.soulSandPile.name=Seelensandhaufen
+item.rock.name=Stein
+item.snowballRock.name=Stein im Schneeball
+item.ectoplasm.name=Ektoplasma
+item.spectralBrick.name=Spektralziegel
+item.brokenBrick.name=brüchiger Ziegel
+item.brokenNetherBrick.name=brüchiger Netherziegel
+item.brokenSpectralBrick.name=brüchiger Spektralziegel
+item.dynamite.name=Dynamitstange
+item.dynamiteSnowball.name=Dynamitstange im Schneeball
+item.fungusSpore.name=Pilzsporen
+item.corruptedEctoplasm.name=verdorbenes Ektoplasma
+item.corruptedSpectralBrick.name=verdorbener Spektralziegel
+item.brokenCSBrick.name=brüchiger verdorbener Spektralziegel
+item.purifiedSoul.name=gereinigter Seelensand
+item.swiftDust.name=Geschwindigkeitsstaub
+item.shineDust.name=glänzender Staub
+item.loveLetter.name=Liebesbrief
+item.hateMail.name=Hassbrief
+
+tile.spectralBrickBlock.name=Spektralziegel
+tile.csBrickBlock.name=verdorbene Spektralziegel
+
+entity.renkin42swt.torturedSoul.name=gequälte Seele
+entity.renkin42swt.corruptedSoul.name=verdorbene Seele
+entity.renkin42swt.helpfulSoul.name=hilfreiche Seele

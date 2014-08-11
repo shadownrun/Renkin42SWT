@@ -44,6 +44,7 @@ public class EntityHelpfulSoul extends EntityTameable {
 		return null;
 	}
 	
+	@Override
 	/**
      * Returns true if the newer Entity AI code should be run
      */
@@ -52,17 +53,16 @@ public class EntityHelpfulSoul extends EntityTameable {
         return true;
     }
     
+	@Override
     protected void applyEntityAttributes() {
     	super.applyEntityAttributes();
-    	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.35D);
+    	this.getAttributeMap().registerAttribute(SharedMonsterAttributes.attackDamage);
+    	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
+    	this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(5.0D);
     }
     
-    public int getAttackStrength(Entity par1Entity)
-    {
-        return 5;
-    }
-    
-    /**
+	@Override
+	/**
      * Returns the sound this mob makes while it's alive.
      */
     protected String getLivingSound()
@@ -70,6 +70,7 @@ public class EntityHelpfulSoul extends EntityTameable {
         return "mob.ghast.moan";
     }
 
+	@Override
     /**
      * Returns the sound this mob makes when it is hurt.
      */
@@ -78,6 +79,7 @@ public class EntityHelpfulSoul extends EntityTameable {
         return "mob.ghast.scream";
     }
 
+	@Override
     /**
      * Returns the sound this mob makes on death.
      */
@@ -86,25 +88,23 @@ public class EntityHelpfulSoul extends EntityTameable {
         return "mob.ghast.death";
     }
     
+	@Override
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return StuffWorthThrowingItems.ectoplasm;
     }
     
-    protected boolean isValidLightLevel()
-    {
-        return true;
-    }
-    
+	@Override
     public boolean attackEntityAsMob(Entity par1Entity)
     {
         int i = 6;
         return par1Entity.attackEntityFrom(DamageSource.causeMobDamage(this), i);
     }
     
+	@Override
     /**
      * Called when the mob is falling. Calculates and applies fall damage.
      */
@@ -116,6 +116,7 @@ public class EntityHelpfulSoul extends EntityTameable {
         return 15728880;
     }
 
+    @Override
     /**
      * Gets how bright this entity is.
      */

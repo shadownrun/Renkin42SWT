@@ -1,0 +1,29 @@
+//Contributed by C4f4s0g0
+
+item.sandPile.name=Monte de Areia
+item.soulSandPile.name=Monte de Areia Espiritual
+item.rock.name=Pedra
+item.snowballRock.name=Bola de Neve Com Pedra Dentro
+item.ectoplasm.name=Ectoplasma
+item.spectralBrick.name=Tijolo Espectral
+item.brokenBrick.name=Tijolo Partido
+item.brokenNetherBrick.name=Tijolo do Nether Partido
+item.brokenSpectralBrick.name=Tijolo Espectral Partido
+item.dynamite.name=Pau de Dinamite
+item.dynamiteSnowball.name=Bola de Neve Com Pau de Dinamite Dentro
+item.fungusSpore.name=Poros de Fungo
+item.corruptedEctoplasm.name=Ectoplasma Corrumpido
+item.corruptedSpectralBrick.name=Tijolo Espectral Corrumpido
+item.brokenCSBrick.name=Tijolo Espectral Corrumpido e Partido
+item.purifiedSoul.name=Areia Espiritual Purificada
+item.swiftDust.name=Pó Veloz
+item.shineDust.name=Pó Brilhante
+item.loveLetter.name=Carta Romântica
+item.hateMail.name=Odear Correio
+
+tile.spectralBrickBlock.name=Tijolos Espectrais
+tile.csBrickBlock.name=Tijolos Espectrais Currumpidos
+
+entity.renkin42swt.torturedSoul.name=Espírito Turturado
+entity.renkin42swt.corruptedSoul.name=Espírito Currumpido
+entity.renkin42swt.helpfulSoul.name=Espírito Colaborador

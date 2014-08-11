@@ -1,0 +1,29 @@
+//Contributed by PepsPlays
+
+item.sandPile.name=Dynge af Sand
+item.soulSandPile.name=Dynge af Sjæle Sand
+item.rock.name=Sten
+item.snowballRock.name=Snebold med Sten
+item.ectoplasm.name=Ektoplasma
+item.spectralBrick.name=Spøgelsesmursten
+item.brokenBrick.name=Ødelagt Mursten
+item.brokenNetherBrick.name=Ødelagt Nether Mursten
+item.brokenSpectralBrick.name=Ødelagt Spøgelsesmursten
+item.dynamite.name=Pind af Dynamit
+item.dynamiteSnowball.name=Snebold med en Pin af Dynamit
+item.fungusSpore.name=Svampesporer
+item.corruptedEctoplasm.name=Korrupt Ektoplasma
+item.corruptedSpectralBrick.name=Korrupt Spøgelsesmursten
+item.brokenCSBrick.name=Ødelagt Korrupt Spøgelsesmursten
+item.purifiedSoul.name=Renset Sjæle Sand
+item.swiftDust.name=Hurtig Støv
+item.shineDust.name=Skinne Støv
+item.loveLetter.name=Kærlighedsbrev
+item.hateMail.name=Hade Mail
+
+tile.spectralBrickBlock.name=Spøgelsesmursten
+tile.csBrickBlock.name=Korrupt Spøgelsesmursten
+
+entity.renkin42swt.torturedSoul.name=Tortureret Sjæl
+entity.renkin42swt.corruptedSoul.name=Korrupt Sjæl
+entity.renkin42swt.helpfulSoul.name=jælpsom Sjæl

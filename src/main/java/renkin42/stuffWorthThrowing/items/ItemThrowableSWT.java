@@ -2,20 +2,34 @@ package renkin42.stuffWorthThrowing.items;
 
 import renkin42.stuffWorthThrowing.StuffWorthThrowing;
 import renkin42.stuffWorthThrowing.StuffWorthThrowingConfig;
-import renkin42.stuffWorthThrowing.entities.EntitySandPile;
+import renkin42.stuffWorthThrowing.entities.EntityThrowableSWT;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemSandPile extends Item {
+public class ItemThrowableSWT extends Item{
+
+	private String itemName;
+	private int itemType;
+	private int effect;
+	private String particle;
 	
-	public ItemSandPile(String unlocalizedName) {
+	/**Used for generic throwable items.
+	 *itemName = the item's unlocalized name
+	 *itemType = 0 for regular debuffs, 1 for flaming bricks, 2 for bricks, 3 rocks, 4 for buffs
+	 *effect = Potion effect. Use 0 for no effect
+	 *particle = Particle type spawned on impact*/
+	public ItemThrowableSWT(String unlocalizedName, int itemType, int effect, String particle, CreativeTabs tab) {
 		setMaxStackSize(16);
-		setCreativeTab(CreativeTabs.tabMaterials);
+		setCreativeTab(tab);
 		setUnlocalizedName(unlocalizedName);
 		setTextureName(StuffWorthThrowing.mod_id + ":" + unlocalizedName);
+		this.itemName = unlocalizedName;
+		this.itemType = itemType;
+		this.effect = effect;
+		this.particle = particle;
 	}
 	
 	/**
@@ -33,7 +47,7 @@ public class ItemSandPile extends Item {
 
             if (!par2World.isRemote)
             {
-                par2World.spawnEntityInWorld(new EntitySandPile(par2World, par3EntityPlayer));
+                par2World.spawnEntityInWorld(new EntityThrowableSWT(par2World, par3EntityPlayer, this.itemName, this.itemType, this.effect, this.particle));
             }
 
         }

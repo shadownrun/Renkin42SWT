@@ -1,0 +1,27 @@
+item.sandPile.name=Handfull o' Hot Dirt
+item.soulSandPile.name=Handfull o' Devil's Sand
+item.rock.name=Throwin' Stone
+item.snowballRock.name=Frosty Throwin' Stone
+item.ectoplasm.name=Ball o' Ghost Goo
+item.spectralBrick.name=Brick o' Davy Jones
+item.brokenBrick.name=Smashed up Clay Brick
+item.brokenNetherBrick.name=Smashed up Devil's Brick
+item.brokenSpectralBrick.name=Smashed up Brick o' Davy Jones
+item.dynamite.name=Boom Stick
+item.dynamiteSnowball.name=Frosty Boom Stick
+item.fungusSpore.name='Shroom Stuff
+item.corruptedEctoplasm.name=Evil Ghost Goo
+item.corruptedSpectralBrick.name=Evil Brick o' Davy Jones
+item.brokenCSBrick.name=Smashed up Evil Brick o' Davy Jones
+item.purifiedSoul.name=Sand o' the Devil no More
+item.swiftDust.name=Handfull o' Speedy Stuff
+item.shineDust.name=Handfull o' Shiny Stuff
+item.loveLetter.name=Fanciful Letter
+item.hateMail.name=Letter of Marque
+
+tile.spectralBrickBlock.name=Bricks o' Davy Jones
+tile.csBrickBlock.name=Evil Bricks o' Davy Jones
+
+entity.renkin42swt.torturedSoul.name=Swabbie o' Davy Jones
+entity.renkin42swt.corruptedSoul.name=Evil Swabbie o' Davy Jones
+entity.renkin42swt.helpfulSoul.name=Turncoat o' Davy Jones
