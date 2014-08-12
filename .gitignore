@@ -223,10 +223,7 @@ pip-log.txt
 #############
 
 .gradle/
-gradle/
 build/
-gradlew
-gradlew.bat
 
 
 #################

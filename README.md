@@ -10,9 +10,23 @@ This source code is provided primarily as a resource to fellow modders, though I
 How can I Help?
 ---------------
 
-My biggest need right now is translated .lang files. However, any code improvements are greatly appreciated. This repository should be ready to clone to a Forge Gradle installation, but you're on your own as far as how to accomplish that. 
+My biggest need right now is translated .lang files. However, any code improvements are greatly appreciated. Details on how to use this repository can be found below.
 
-The lang files, though, can be done right here in GitHub. Just fork this repository and switch to the "unreleased" branch. Then, navigate to "src/main/resources/assets/renkin42swt/lang". Here create a new file called something like aa_BB.lang. You can get the correct name from [here][lang-codes]. Copy the contents of en_US.lang into this file, edit it, and commit. Then simply issue a Pull Request and I'll handle it from there.
+The lang files, though, can be done right here in GitHub. Just fork this repository and navigate to "src/main/resources/assets/renkin42swt/lang". Here create a new file called something like aa_BB.lang. You can get the correct name from [here][lang-codes]. Copy the contents of en_US.lang into this file, edit it, and commit. Then simply issue a Pull Request and I'll handle it from there.
+
+Using This Repository
+---------------------
+
+1. Create folder for minecraft mods if you don't have one already. We'll call it MODS for now, but it doesn't really matter.
+2. Create a folder there called 'Renkin42SWT'
+3. Clone this repository to that folder.
+4. Open up MODS/Renkin42SWT and shift+right-click. Choose 'Open Shell Here'. It may be different for non-Windows systems.
+5. Run 
+	gradlew setupDecompWorkspace eclipse
+or
+	gradlew setupDecompWorkspace idea
+depending on which IDE you are using. If you have gradle installed, go ahead and use it instead.
+6. Open Eclipse or Idea and set the workspace to the MODS folder. This project should now be visible and ready to use!
 
 [mcf]: http://www.minecraftforum.net/topic/1847376-forge-renkin42s-stuff-worth-throwing-mod/
 [curse]: http://www.curse.com/mc-mods/minecraft/stuff-worth-throwing
