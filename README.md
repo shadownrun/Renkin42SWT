@@ -22,7 +22,7 @@ Using This Repository
 3. Clone this repository to that folder.
 4. Open up MODS/Renkin42SWT and shift+right-click. Choose 'Open Shell Here'. It may be different for non-Windows systems.
 5. Run 
-6. 
+
 	gradlew setupDecompWorkspace eclipse
 
 or
