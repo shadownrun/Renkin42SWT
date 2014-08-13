@@ -21,15 +21,7 @@ Using This Repository
 2. Create a folder there called 'Renkin42SWT'
 3. Clone this repository to that folder.
 4. Open up MODS/Renkin42SWT and shift+right-click. Choose 'Open Shell Here'. It may be different for non-Windows systems.
-5. Run 
-
-	gradlew setupDecompWorkspace eclipse
-
-or
-
-	gradlew setupDecompWorkspace idea
-	
-depending on which IDE you are using. If you have gradle installed, go ahead and use it instead.
+5. Run ```gradlew setupDecompWorkspace eclipse``` or ```gradlew setupDecompWorkspace idea``` depending on which IDE you are using. If you have gradle installed, go ahead and use it instead.
 6. Open Eclipse or Idea and set the workspace to the MODS folder. This project should now be visible and ready to use!
 
 [mcf]: http://www.minecraftforum.net/topic/1847376-forge-renkin42s-stuff-worth-throwing-mod/
