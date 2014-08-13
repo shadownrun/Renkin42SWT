@@ -46,12 +46,31 @@ direct ports will not result in this number staying the same.
 	.jar file into that folder. Now close your file explorer, start Minecraft, and enjoy!
 
 **********************
+*     LANGUAGES      *
+**********************
+
+This mod currently supports the following languages:
+	English (English)
+	Pirate (Pirate Speak)
+	Spanish (Español)
+	German (Deutsch)
+	Portuguese (Portuguese)
+	Afrikaans (Afrikaans)
+	Danish (Dansk)
+	Swedish (Svenska)
+	Japanese (日本語)
+	Polish (Polski)
+	Russian (Русский)
+
+My apologies for not translating this README, too much work.
+
+**********************
 *    FEATURE LIST    *
 **********************
 
 ITEMS:
 	Pile of Sand: 
-		Inflicts 10 seconds of blindness.
+		Inflicts 15 seconds of blindness.
 	Pile of Soul Sand: 
 		Inflicts 10 seconds each of blindness and wither. May randomly spawn a Tortured 
 		Soul or Corrupted Soul.
@@ -63,6 +82,10 @@ ITEMS:
 		Dropped by Tortured Souls. Used to craft Spectral Bricks.
 	Corrupted Ectoplasm: 
 		Dropped by Corrupted Souls, used to craft Corrupted Spectral Bricks.
+	Spectral Brick:
+		Crafted from bricks and ectoplasm, use 4 to craft a Spectral Brick Block.
+	Corrupted Spectral Brick:
+		Same as Spectral Brick, but with Corrupted Ectoplasm.
 	Broken Brick: 
 		Does 2-4 damage and inflicts 6-12 seconds of nausea;
 	Broken Nether Brick: 
@@ -75,6 +98,43 @@ ITEMS:
 		Creates an explosion with 1/2 the power of TNT.
 	Snowball with a Stick of Dynamite in It:
 		Same as Dynamite, but also effective against Blazes.
-	
-	
-	
+	Fungal Spores:
+		Inflicts 10 seconds each of poison and slowness.
+	Purified Soul Sand:
+		Spawns a Helpful Soul to fight for you.
+	Swift Dust:
+		Gives 30 seconds of Swiftness.
+	Shine Dust:
+		Gives 30 seconds of Night Vision.
+	Love Letter:
+		Spawns a baby of any animal it hits.
+	Hate Mail:
+		Spawns a baby of any aggressive mobs it hits.
+	Tomahawk:
+		Throwable Axe that deals significant damage on impact. Will drop on impact.
+
+BLOCKS:
+	Spectral Bricks:
+		Translucent bricks that glow dimly and are highly blast-resistant.
+	Corrupted Spectral Bricks:
+		Similar to Spectral Bricks, but red and slightly brighter.
+	Spectral Brick Stairs:
+		Stairs made of Spectral Bricks.
+	Corrupted Spectral Brick Stairs:
+		Stairs made from Corrupted Spectral Bricks.
+	Spectral Brick Slab:
+		Half-slab made of Spectral Bricks. Does not double.
+	Corrupted Spectral Brick Stairs:
+		Half-slab made from Corrupted Spectral Bricks. Does not double.
+
+MOBS:
+	Tortured Soul:
+		The vengeful spirit of a fallen adventurer. Spawns naturally in swamps. Drops
+		Ectoplasm and Ghast Tears.
+	Corrupted Soul:
+		The unholy spirit of a hardened criminal. May be found in the Nether. Far more
+		powerful than Tortured Souls, they should be avoided if possible. Drops Corrupted
+		Ectoplasm and Ghast Tears.
+	Helpful Soul:
+		A spirit finally at peace, it will reward you by fighting for you until	it moves
+		on. Will not hesitate to attack if provoked. Drops Ectoplasm if defeated.
