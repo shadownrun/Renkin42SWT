@@ -13,7 +13,6 @@ import renkin42.stuffWorthThrowing.entities.EntityHelpfulSoul;
 import renkin42.stuffWorthThrowing.entities.EntityLoveLetter;
 import renkin42.stuffWorthThrowing.entities.EntityPurifiedSoul;
 import renkin42.stuffWorthThrowing.entities.EntitySnowballRock;
-import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
 import renkin42.stuffWorthThrowing.entities.EntityThrowableSWT;
 import renkin42.stuffWorthThrowing.entities.EntityTomahawk;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
@@ -34,7 +33,6 @@ public class ClientProxy extends CommonProxy {
             	thrownDynamiteSnowball = StuffWorthThrowingItems.dynamiteSnowball;
             }
             
-            RenderingRegistry.registerEntityRenderingHandler(EntitySoulSandPile.class, new RenderSnowball(StuffWorthThrowingItems.soulSandPile));
             RenderingRegistry.registerEntityRenderingHandler(EntitySnowballRock.class, new RenderSnowball(thrownSnowballRock));
             RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, new RenderDynamite());
             RenderingRegistry.registerEntityRenderingHandler(EntityDynamiteSnowball.class, new RenderSnowball(thrownDynamiteSnowball));

@@ -14,14 +14,16 @@ public class ItemThrowableSWT extends Item{
 	private String itemName;
 	private int itemType;
 	private int effect;
+	private int effect2;
 	private String particle;
 	
 	/**Used for generic throwable items.
 	 *itemName = the item's unlocalized name
-	 *itemType = 0 for regular debuffs, 1 for flaming bricks, 2 for bricks, 3 rocks, 4 for buffs
+	 *itemType = 0 for spawning souls, 1 for dual-effect items, 2 for normal debuffs, 3 for flaming bricks, 4 for bricks, 5 for rocks, 6 for buffs
 	 *effect = Potion effect. Use 0 for no effect
+	 *effect2 = Second Potion effect, Use 0 for none.
 	 *particle = Particle type spawned on impact*/
-	public ItemThrowableSWT(String unlocalizedName, int itemType, int effect, String particle, CreativeTabs tab) {
+	public ItemThrowableSWT(String unlocalizedName, int itemType, int effect, int effect2, String particle, CreativeTabs tab) {
 		setMaxStackSize(16);
 		setCreativeTab(tab);
 		setUnlocalizedName(unlocalizedName);
@@ -29,6 +31,7 @@ public class ItemThrowableSWT extends Item{
 		this.itemName = unlocalizedName;
 		this.itemType = itemType;
 		this.effect = effect;
+		this.effect2 = effect2;
 		this.particle = particle;
 	}
 	
@@ -47,7 +50,7 @@ public class ItemThrowableSWT extends Item{
 
             if (!par2World.isRemote)
             {
-                par2World.spawnEntityInWorld(new EntityThrowableSWT(par2World, par3EntityPlayer, this.itemName, this.itemType, this.effect, this.particle));
+                par2World.spawnEntityInWorld(new EntityThrowableSWT(par2World, par3EntityPlayer, this.itemName, this.itemType, this.effect, this.effect2, this.particle));
             }
 
         }

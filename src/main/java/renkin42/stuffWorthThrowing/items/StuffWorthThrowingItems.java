@@ -35,24 +35,24 @@ public class StuffWorthThrowingItems {
 	
 	public StuffWorthThrowingItems() {
 		
-		sandPile = new ItemThrowableSWT("sandPile", 0, Potion.blindness.getId(), "crit", CreativeTabs.tabMaterials);
-    	soulSandPile = new ItemSoulSandPile("soulSandPile");
-    	rock = new ItemThrowableSWT("rock", 3, 0, "smoke", CreativeTabs.tabMaterials);
+		sandPile = new ItemThrowableSWT("sandPile", 2, Potion.blindness.getId(), 0, "crit", CreativeTabs.tabMaterials);
+    	soulSandPile = new ItemThrowableSWT("soulSandPile", 0, Potion.blindness.getId(), Potion.wither.getId(), "magicCrit", CreativeTabs.tabMaterials);
+    	rock = new ItemThrowableSWT("rock", 5, 0, 0, "smoke", CreativeTabs.tabMaterials);
     	snowballRock = new ItemSnowballRock("snowballRock");
     	ectoplasm = new ItemNormal("ectoplasm");
     	spectralBrick = new ItemNormal("spectralBrick");
-    	brokenBrick = new ItemThrowableSWT("brokenBrick", 2, 0, "smoke", CreativeTabs.tabMisc);
-    	brokenNetherBrick = new ItemThrowableSWT("brokenNetherBrick", 1, 0, "smoke", CreativeTabs.tabMisc);
-    	brokenSpectralBrick = new ItemThrowableSWT("brokenSpectralBrick", 2, Potion.weakness.getId(), "smoke", CreativeTabs.tabMisc);
+    	brokenBrick = new ItemThrowableSWT("brokenBrick", 4, 0, 0, "smoke", CreativeTabs.tabMisc);
+    	brokenNetherBrick = new ItemThrowableSWT("brokenNetherBrick", 3, 0, 0, "smoke", CreativeTabs.tabMisc);
+    	brokenSpectralBrick = new ItemThrowableSWT("brokenSpectralBrick", 4, 0, Potion.weakness.getId(), "smoke", CreativeTabs.tabMisc);
     	dynamite = new ItemDynamite("dynamite");
     	dynamiteSnowball = new ItemDynamiteSnowball("dynamiteSnowball");
-    	fungusSpore = new ItemThrowableSWT("fungusSpore", 0, Potion.poison.getId(), "magicCrit", CreativeTabs.tabMisc);
+    	fungusSpore = new ItemThrowableSWT("fungusSpore", 1, Potion.poison.getId(), Potion.moveSlowdown.getId(), "magicCrit", CreativeTabs.tabMisc);
     	corruptedEctoplasm = new ItemNormal("corruptedEctoplasm");
     	corruptedSpectralBrick = new ItemNormal("corruptedSpectralBrick");
-    	brokenCSBrick = new ItemThrowableSWT("brokenCSBrick", 2, Potion.wither.getId(), "crit", CreativeTabs.tabMisc);
+    	brokenCSBrick = new ItemThrowableSWT("brokenCSBrick", 4, Potion.wither.getId(), 0, "crit", CreativeTabs.tabMisc);
     	purifiedSoul = new ItemPurifiedSoul("purifiedSoul");
-    	swiftDust = new ItemThrowableSWT("swiftDust", 4, Potion.moveSpeed.getId(), "magicCrit", CreativeTabs.tabMisc);
-    	shineDust = new ItemThrowableSWT("shineDust", 4, Potion.nightVision.getId(), "crit", CreativeTabs.tabMisc);
+    	swiftDust = new ItemThrowableSWT("swiftDust", 6, Potion.moveSpeed.getId(), 0, "magicCrit", CreativeTabs.tabMisc);
+    	shineDust = new ItemThrowableSWT("shineDust", 6, Potion.nightVision.getId(), 0, "crit", CreativeTabs.tabMisc);
     	loveLetter = new ItemLoveLetter("loveLetter");
     	hateMail = new ItemHateMail("hateMail");
     	tomahawkWooden = new ItemTomahawk("tomahawkWood",(byte)5, 59);

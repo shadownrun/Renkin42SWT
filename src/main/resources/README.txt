@@ -50,15 +50,31 @@ direct ports will not result in this number staying the same.
 **********************
 
 ITEMS:
-	Pile of Sand: Inflicts 10 seconds of blindness.
-	Pile of Soul Sand: Inflicts 10 seconds each of blindness and wither. May randomly spawn a 
-					   Tortured Soul or Corrupted Soul.
-	Rock: Does 1-3 damage and inflicts 3-9 seconds of nausea.
-	Snowball with a Rock in It: Same as a rock, but also effective against blazes.
-	Ectoplasm: Dropped by Tortured Souls. Used to craft Spectral Bricks.
-	Corrupted Ectoplasm: Dropped by Corrupted Souls, used to craft Corrupted Spectral Bricks.
-	Broken Brick: Does 2-4 damage and inflicts 6-12 seconds of nausea;
-	Broken Nether Brick: Same as broken brick, but also sets target on fire.
-	Broken Spectral Brick: Same as broken brick, but also causes weakness.
-	Broken Corrupted Spectral Brick: same as broken brick, but also causes wither.
+	Pile of Sand: 
+		Inflicts 10 seconds of blindness.
+	Pile of Soul Sand: 
+		Inflicts 10 seconds each of blindness and wither. May randomly spawn a Tortured 
+		Soul or Corrupted Soul.
+	Rock: 
+		Does 1-3 damage and inflicts 3-9 seconds of nausea.
+	Snowball with a Rock in It: 
+		Same as a rock, but also effective against blazes.
+	Ectoplasm: 
+		Dropped by Tortured Souls. Used to craft Spectral Bricks.
+	Corrupted Ectoplasm: 
+		Dropped by Corrupted Souls, used to craft Corrupted Spectral Bricks.
+	Broken Brick: 
+		Does 2-4 damage and inflicts 6-12 seconds of nausea;
+	Broken Nether Brick: 
+		Same as broken brick, but also sets target on fire.
+	Broken Spectral Brick: 
+		Same as broken brick, but also causes weakness.
+	Broken Corrupted Spectral Brick: 
+		Same as broken brick, but also causes wither.
+	Stick of Dynamite:
+		Creates an explosion with 1/2 the power of TNT.
+	Snowball with a Stick of Dynamite in It:
+		Same as Dynamite, but also effective against Blazes.
+	
+	
 	

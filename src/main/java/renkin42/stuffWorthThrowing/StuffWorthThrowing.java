@@ -9,7 +9,6 @@ import renkin42.stuffWorthThrowing.entities.EntityHelpfulSoul;
 import renkin42.stuffWorthThrowing.entities.EntityLoveLetter;
 import renkin42.stuffWorthThrowing.entities.EntityPurifiedSoul;
 import renkin42.stuffWorthThrowing.entities.EntitySnowballRock;
-import renkin42.stuffWorthThrowing.entities.EntitySoulSandPile;
 import renkin42.stuffWorthThrowing.entities.EntityThrowableSWT;
 import renkin42.stuffWorthThrowing.entities.EntityTomahawk;
 import renkin42.stuffWorthThrowing.entities.EntityTorturedSoul;
@@ -59,7 +58,6 @@ public class StuffWorthThrowing {
 		
 		new StuffWorthThrowingRecipes();
 		
-		EntityRegistry.registerModEntity(EntitySoulSandPile.class, "soulSandPile", 210, this, 64, 1, true);
 		EntityRegistry.registerModEntity(EntitySnowballRock.class, "snowballRock", 211, this, 64, 1, true);
 		EntityRegistry.registerModEntity(EntityTorturedSoul.class, "torturedSoul", 212, this, 32, 1, true);
 		EntityRegistry.registerModEntity(EntityDynamite.class, "dynamite", 213, this, 64, 1, true);
