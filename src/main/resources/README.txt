@@ -138,3 +138,195 @@ MOBS:
 	Helpful Soul:
 		A spirit finally at peace, it will reward you by fighting for you until	it moves
 		on. Will not hesitate to attack if provoked. Drops Ectoplasm if defeated.
+		
+**********************
+*      CRAFTING      *
+**********************
+
+SHAPELESS:
+	1 Sand = 4 Piles of Sand
+	1 Soul Sand = 4 Piles of Soul Sand
+	1 Cobblestone = 4 Rocks
+	1 Rock + 1 Snowball = 1 Snowball With a Rock in It
+	1 Pile of Sand + 1 Ectoplasm = 1 Pile of Soul Sand
+	1 Brick + 1 Ectoplasm = 1 Spectral Brick
+	1 Brick + 1 Corrupted Ectoplasm = 1 Corrupted Spectral Brick
+	1 Brick = 2 Broken Bricks
+	1 Nether Brick = 2 Broken Nether Bricks
+	1 Spectral Brick = 2 Broken Spectral Bricks
+	1 Corrupted Spectral Brick = 2 Broken Corrupted Spectral Bricks
+	1 TNT = 4 Sticks of Dynamite
+	1 Stick of Dynamite + 1 Snowball = 1 Snowball With a Stick of Dynamite in It
+	1 Mushroom = 2 Fungal Spores
+	1 Sugar + 1 Ectoplasm = 1 Purified Soul Sand
+	1 Redstone + 1 Sugar = 1 Swift Dust
+	1 Redstone + 1 Glowstone Dust = 1 Shine Dust
+	1 Paper + 1 Ink Sac + 1 Purified Soul Sand = 1 Love Letter
+	1 Paper + 1 Ink Sac + 1 Pile of Soul Sand = 1 Hate Mail
+
+SHAPED:
+	Sand:
+		+---+---+---+   X = Pile of Sand
+		| X | X |   |
+		+---+---+---+
+		| X | X |   |
+		+---+---+---+
+		|   |   |   |		
+		+---+---+---+	
+	Soul Sand:
+		+---+---+---+   X = Pile of Soul Sand
+		| X | X |   |
+		+---+---+---+
+		| X | X |   |
+		+---+---+---+
+		|   |   |   |		
+		+---+---+---+
+	Cobblestone:
+		+---+---+---+   X = Rock
+		| X | X |   |
+		+---+---+---+
+		| X | X |   |
+		+---+---+---+
+		|   |   |   |		
+		+---+---+---+	
+	Spectral Bricks:
+		+---+---+---+   X = Spectral Brick
+		| X | X |   |
+		+---+---+---+
+		| X | X |   |
+		+---+---+---+
+		|   |   |   |		
+		+---+---+---+
+	Corrupted Spectral Bricks:
+		+---+---+---+   X = Corrupted Spectral Brick
+		| X | X |   |
+		+---+---+---+
+		| X | X |   |
+		+---+---+---+
+		|   |   |   |		
+		+---+---+---+
+	TNT:
+		+---+---+---+   X = Stick of Dynamite
+		| X | X |   |
+		+---+---+---+
+		| X | X |   |
+		+---+---+---+
+		|   |   |   |		
+		+---+---+---+
+	Spectral Brick Stairs
+		+---+---+---+   X = Spectral Bricks
+		|   |   | X |
+		+---+---+---+
+		|   | X | X |
+		+---+---+---+
+		| X | X | X |		
+		+---+---+---+	
+	Corrupted Spectral Brick Stairs:
+		+---+---+---+   X = Corrupted Spectral Bricks
+		|   |   | X |
+		+---+---+---+
+		|   | X | X |
+		+---+---+---+
+		| X | X | X |		
+		+---+---+---+
+	Spectral Brick Slab:
+		+---+---+---+   X = Spectral Bricks
+		|   |   |   |
+		+---+---+---+
+		| X | X | X |
+		+---+---+---+
+		|   |   |   |		
+		+---+---+---+
+	Corrupted Spectral Brick Slab:
+		+---+---+---+   X = Corrupted Spectral Bricks
+		|   |   |   |
+		+---+---+---+
+		| X | X | X |
+		+---+---+---+
+		|   |   |   |		
+		+---+---+---+
+	Wooden Tomahawk:
+		+---+---+---+   X = Wooden Plank (Any Type)
+		|   | X | X |   Y = Stick
+		+---+---+---+
+		|   | Y |   |
+		+---+---+---+
+		| Y |   |   |		
+		+---+---+---+
+	Stone Tomahawk:
+		+---+---+---+   X = Cobblestone
+		|   | X | X |   Y = Stick
+		+---+---+---+
+		|   | Y |   |
+		+---+---+---+
+		| Y |   |   |		
+		+---+---+---+
+	Iron Tomahawk:
+		+---+---+---+   X = Iron Ingot
+		|   | X | X |   Y = Stick
+		+---+---+---+
+		|   | Y |   |
+		+---+---+---+
+		| Y |   |   |		
+		+---+---+---+
+	Golden Tomahawk:
+		+---+---+---+   X = Gold Ingot
+		|   | X | X |   Y = Stick
+		+---+---+---+
+		|   | Y |   |
+		+---+---+---+
+		| Y |   |   |		
+		+---+---+---+	
+	Diamond Tomahawk:
+		+---+---+---+   X = Diamond
+		|   | X | X |   Y = Stick
+		+---+---+---+
+		|   | Y |   |
+		+---+---+---+
+		| Y |   |   |		
+		+---+---+---+	
+
+SMELTING:
+	Pile of Soul Sand -> Ectoplasm
+	Corrupted Ectoplasm -> Ectoplasm
+
+**********************
+*    SPAWN CODES     *
+**********************
+
+Use these codes for the /give command:
+
+ITEMS:
+	Pile of Sand = renkin42swt:sand_pile
+	Pile of Soul Sand = renkin42swt:soul_sand_pile
+	Rock = renkin42swt:rock
+	Snowball With a Rock in It = renkin42swt:snowball_rock
+	Ball of Ectoplasm = renkin42swt:ectoplasm
+	Corrupted Ectoplasm = renkin42swt:corrupted_ectoplasm
+	Spectral Brick = renkin42swt:spectral_brick
+	Corrupted Spectral Brick = renkin42swt:cs_brick
+	Broken Brick = renkin42swt:broken_brick
+	Broken Nether Brick = renkin42swt:broken_nether_brick
+	Broken Spectral Brick = renkin42swt:broken_spectral_brick
+	broken Corrupted Spectral Brick = renkin42swt:broken_cs_brick
+	Stick of Dynamite = renkin42swt:dynamite
+	Snowball With a Stick of Dynamite in It = renkin42swt:dynamite_snowball
+	Fungal Spore = renkin42swt:fungus_spore
+	Purified Soul Sand = renkin42swt:purified_soul_sand
+	Swift Dust = renkin42swt:swift_dust
+	Shine Dust = renkin42swt:shine_dust
+	Love Letter = renkin42swt:love_letter
+	Hate Mail = renkin42swt:hate_mail
+	Wooden Tomahawk = renkin42swt:tomahawk_wood
+	Stone Tomahawk = renkin42swt:tomahawk_stone
+	Iron Tomahawk = renkin42swt:tomahawk_iron
+	Golden Tomahawk = renkin42swt:tomahawk_gold
+	Diamond Tomahawk = renkin42swt:tomahawk_diamond
+	
+BLOCKS:
+	Spectral Bricks = renkin42swt:spectral_brick_block
+	Corrupted Spectral Bricks = renkin42swt:cs_brick_block
+	Spectral Brick Stairs = renkin42swt:spectral_brick_stairs
+	Corrupted Spectral Brick Stairs = renkin42swt:cs_brick_stairs
+	Spectral Brick Slab = renkin42swt:spectral_brick_Slab
+	Corrupted Spectral Brick Slab = renkin42swt:cs_brick_Slab
