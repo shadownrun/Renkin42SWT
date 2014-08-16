@@ -20,9 +20,18 @@ item.swiftDust.name=mucha brud
 item.shineDust.name=Shine kurzu
 item.loveLetter.name=Miłość zrobienie
 item.hateMail.name= nienawidzić  ty
+item.tomahawkWood.name=drewniane Tomahawk
+item.tomahawkStone.name=kamień Tomahawk
+item.tomahawkIron.name=żelazko Tomahawk
+item.tomahawkGold.name=złoty Tomahawk
+item.tomahawkDiamond.name=diament Tomahawk
 
 tile.spectralBrickBlock.name=iskierka cegła
 tile.csBrickBlock.name=skorumpowany iskierka cegła
+tile.spectralBrickStairs.name=iskierka cegła schody
+tile.csBrickStairs.name=skorumpowany iskierka cegła schody
+tile.spectralBrickSlab.name=iskierka cegła płyta
+tile.csBrickSlab.name=skorumpowany iskierka cegła płyta
 
 entity.renkin42swt.torturedSoul.name=torturowany człowiek
 entity.renkin42swt.corruptedSoul.name=skorumpowany  człowiek

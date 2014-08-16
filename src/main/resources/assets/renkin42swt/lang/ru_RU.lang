@@ -20,9 +20,18 @@ item.swiftDust.name=Пыль стремительности
 item.shineDust.name=Пыль сияния
 item.loveLetter.name=Любовное послание
 item.hateMail.name=Письмо с угрозами
+item.tomahawkWood.name=Деревянный Томагавк
+item.tomahawkStone.name=Камень Томагавк
+item.tomahawkIron.name=Утюг Томагавк
+item.tomahawkGold.name=Золотой Томагавк
+item.tomahawkDiamond.name=Алмазный Томагавк
 
 tile.spectralBrickBlock.name=Спектральные кирпичи
 tile.csBrickBlock.name=Искажённые спектральные кирпичи
+tile.spectralBrickStairs.name=Спектральные кирпичи ступеньки
+tile.csBrickStairs.name=Искажённые спектральные кирпичи ступеньки
+tile.spectralBrickSlab.name=Спектральные кирпичи плита
+tile.csBrickSlab.name=Искажённые спектральные кирпичи плита
 
 entity.renkin42swt.torturedSoul.name=Измученная душа
 entity.renkin42swt.corruptedSoul.name=Искажённая душа

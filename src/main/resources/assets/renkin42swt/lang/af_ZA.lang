@@ -20,9 +20,18 @@ item.swiftDust.name=Snelstof
 item.shineDust.name=Skynstof
 item.loveLetter.name=Liefdesbrief
 item.hateMail.name=Haatpos
+item.tomahawkWood.name=Hout Gooi Byl
+item.tomahawkStone.name=Klip Gooi Byl
+item.tomahawkIron.name=Yster Gooi Byl
+item.tomahawkGold.name=Goue Gooi Byl
+item.tomahawkDiamond.name=Diamant Gooi Byl
 
 tile.spectralBrickBlock.name=Spookbakstene
 tile.csBrickBlock.name=Bedorwe Spookbakstene
+tile.spectralBrickStairs.name=Spookbakstene Trappe
+tile.csBrickStairs.name=Bedorwe Spookbakstene Trappe
+tile.spectralBrickSlab.name=Spookbaksteneblad
+tile.csBrickSlab.name=Bedorwe Spookbaksteneblad
 
 entity.renkin42swt.torturedSoul.name=Gemartelde Siel
 entity.renkin42swt.corruptedSoul.name=Bedorwe Siel

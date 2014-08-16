@@ -16,13 +16,22 @@ item.corruptedEctoplasm.name=Ectoplasma corrupto
 item.corruptedSpectralBrick.name=Ladrillo espectral corrupto
 item.brokenCSBrick.name=Ladrillo espectral roto y corrupto
 item.purifiedSoul.name=Arena de almas purificada
-item.swiftDust.name=Polvo de r·pidez
+item.swiftDust.name=Polvo de r√°pidez
 item.shineDust.name=Polvo de brillo
 item.loveLetter.name=Carta de amor
 item.hateMail.name=Correo de odio
+item.tomahawkWood.name=Tomahawk de madera
+item.tomahawkStone.name=Tomahawk de piedra
+item.tomahawkIron.name=Tomahawk de hierro
+item.tomahawkGold.name=Tomahawk de oro
+item.tomahawkDiamond.name=Tomahawk de diamante
 
 tile.spectralBrickBlock.name=Ladrillos espectrales
 tile.csBrickBlock.name=Ladrillos espectrales corruptos
+tile.spectralBrickStairs.name=Escaleras de ladrillos espectrales
+tile.csBrickStairs.name=Escaleras de ladrillos espectrales corruptos
+tile.spectralBrickSlab.name=Losa de ladrillos espectrales
+tile.csBrickSlab.name=Losa de ladrillos espectrales corruptos
 
 entity.renkin42swt.torturedSoul.name=Arena torturada
 entity.renkin42swt.corruptedSoul.name=Arena corrupta

@@ -1,29 +1,38 @@
 //Contributed by PepsPlays
 
 item.sandPile.name=Dynge af Sand
-item.soulSandPile.name=Dynge af Sjæle Sand
+item.soulSandPile.name=Dynge af SjÃ¦le Sand
 item.rock.name=Sten
 item.snowballRock.name=Snebold med Sten
 item.ectoplasm.name=Ektoplasma
-item.spectralBrick.name=Spøgelsesmursten
-item.brokenBrick.name=Ødelagt Mursten
-item.brokenNetherBrick.name=Ødelagt Nether Mursten
-item.brokenSpectralBrick.name=Ødelagt Spøgelsesmursten
+item.spectralBrick.name=SpÃ¸gelsesmursten
+item.brokenBrick.name=Ã˜delagt Mursten
+item.brokenNetherBrick.name=Ã˜delagt Nether Mursten
+item.brokenSpectralBrick.name=Ã˜delagt SpÃ¸gelsesmursten
 item.dynamite.name=Pind af Dynamit
 item.dynamiteSnowball.name=Snebold med en Pin af Dynamit
 item.fungusSpore.name=Svampesporer
 item.corruptedEctoplasm.name=Korrupt Ektoplasma
-item.corruptedSpectralBrick.name=Korrupt Spøgelsesmursten
-item.brokenCSBrick.name=Ødelagt Korrupt Spøgelsesmursten
-item.purifiedSoul.name=Renset Sjæle Sand
-item.swiftDust.name=Hurtig Støv
-item.shineDust.name=Skinne Støv
-item.loveLetter.name=Kærlighedsbrev
+item.corruptedSpectralBrick.name=Korrupt SpÃ¸gelsesmursten
+item.brokenCSBrick.name=Ã˜delagt Korrupt SpÃ¸gelsesmursten
+item.purifiedSoul.name=Renset SjÃ¦le Sand
+item.swiftDust.name=Hurtig StÃ¸v
+item.shineDust.name=Skinne StÃ¸v
+item.loveLetter.name=KÃ¦rlighedsbrev
 item.hateMail.name=Hade Mail
+item.tomahawkWood.name=TrÃ¦kasteÃ¸kse
+item.tomahawkStone.name=StenkasteÃ¸kse
+item.tomahawkIron.name=JernkasteÃ¸kse
+item.tomahawkGold.name=GuldkasteÃ¸kse
+item.tomahawkDiamond.name=DiamantkasteÃ¸kse
 
-tile.spectralBrickBlock.name=Spøgelsesmursten
-tile.csBrickBlock.name=Korrupt Spøgelsesmursten
+tile.spectralBrickBlock.name=SpÃ¸gelsesmursten
+tile.csBrickBlock.name=Korrupt SpÃ¸gelsesmursten
+tile.spectralBrickStairs.name=SpÃ¸gelsesmurstenstrappe
+tile.csBrickStairs.name=Korrupt SpÃ¸gelsesmurstenstrappe
+tile.spectralBrickSlab.name=SpÃ¸gelsesmurstensflise
+tile.csBrickSlab.name=Korrupt SpÃ¸gelsesmurstensflise
 
-entity.renkin42swt.torturedSoul.name=Tortureret Sjæl
-entity.renkin42swt.corruptedSoul.name=Korrupt Sjæl
-entity.renkin42swt.helpfulSoul.name=jælpsom Sjæl
+entity.renkin42swt.torturedSoul.name=Tortureret SjÃ¦l
+entity.renkin42swt.corruptedSoul.name=Korrupt SjÃ¦l
+entity.renkin42swt.helpfulSoul.name=JÃ¦lpsom SjÃ¦l

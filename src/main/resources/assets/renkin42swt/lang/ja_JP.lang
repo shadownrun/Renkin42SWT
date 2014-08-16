@@ -20,9 +20,18 @@ item.swiftDust.name=スイフトほこり
 item.shineDust.name=輝きほこり
 item.loveLetter.name=信書を愛して
 item.hateMail.name=憎しみの信書
+item.tomahawkWood.name=木製トマホーク
+item.tomahawkStone.name=石トマホーク
+item.tomahawkIron.name=アイアントマホーク
+item.tomahawkGold.name=黄金トマホーク
+item.tomahawkDiamond.name=ダイヤモンドトマホーク
 
 tile.spectralBrickBlock.name=ファントムれんがブロック
 tile.csBrickBlock.name=邪悪なファントムレンガブロック
+tile.spectralBrickStairs.name=スペクトラルブリック階段
+tile.csBrickStairs.name=破損したスペクトルブリック階段
+tile.spectralBrickSlab.name=スペクトラルブリックスラブ
+tile.csBrickSlab.name=破損したスペクトルブリックスラブ
 
 entity.renkin42swt.torturedSoul.name=拷問し魂
 entity.renkin42swt.corruptedSoul.name=邪悪な魂

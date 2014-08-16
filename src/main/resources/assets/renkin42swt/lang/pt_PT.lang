@@ -20,9 +20,18 @@ item.swiftDust.name=Pó Veloz
 item.shineDust.name=Pó Brilhante
 item.loveLetter.name=Carta Romântica
 item.hateMail.name=Odear Correio
+item.tomahawkWood.name=Madeira Tomahawk
+item.tomahawkStone.name=Pedra Tomahawk
+item.tomahawkIron.name=Ferro Tomahawk
+item.tomahawkGold.name=Ouro Tomahawk
+item.tomahawkDiamond.name=Diamante Tomahawk
 
 tile.spectralBrickBlock.name=Tijolos Espectrais
 tile.csBrickBlock.name=Tijolos Espectrais Currumpidos
+tile.spectralBrickStairs.name=Escadas de Tijolos Epectrais
+tile.csBrickStairs.name=Escadas de Tijolos Epectrais corrompidos
+tile.spectralBrickSlab.name=Degrau de Tijolos Epectrais
+tile.csBrickSlab.name=Degrau de Tijolos Epectrais corrompidos
 
 entity.renkin42swt.torturedSoul.name=Espírito Turturado
 entity.renkin42swt.corruptedSoul.name=Espírito Currumpido

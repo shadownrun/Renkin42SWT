@@ -18,9 +18,18 @@ item.swiftDust.name=Kvickdamm
 item.shineDust.name=Skinande damm
 item.loveLetter.name=Kärleksbrev
 item.hateMail.name=Hatbrev
+item.tomahawkWood.name=Trä kastayxa
+item.tomahawkStone.name=Sten kastayxa
+item.tomahawkIron.name=Järn kastayxa
+item.tomahawkGold.name=Gyllene kastayxa
+item.tomahawkDiamond.name=Diamant kastayxa
 
 tile.spectralBrickBlock.name=Spöklik tegelsten
 tile.csBrickBlock.name=Korrupt tegelsten
+tile.spectralBrickStairs.name=Spöklik tegelstenstrappa
+tile.csBrickStairs.name=Korrupt tegelstenstrappa
+tile.spectralBrickSlab.name=Spöklik tegelstensplatta
+tile.csBrickSlab.name=Korrupt tegelstensplatta
 
 entity.renkin42swt.torturedSoul.name=Torterad själ
 entity.renkin42swt.corruptedSoul.name=Korrupt själ
