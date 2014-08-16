@@ -43,7 +43,7 @@ public class EntityDynamiteSnowball extends EntityThrowable {
         }
 		
 		if (!this.worldObj.isRemote) {
-	    boolean flag = par1MovingObjectPosition.entityHit.worldObj.getGameRules().getGameRuleBooleanValue("mobGriefing");		
+	    boolean flag = this.worldObj.getGameRules().getGameRuleBooleanValue("mobGriefing");		
 			
             this.setDead();
             this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, StuffWorthThrowingConfig.explosionStrength, flag);
