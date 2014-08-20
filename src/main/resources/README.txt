@@ -9,7 +9,7 @@ an overview of items, blocks, and mobs, crafting recipes, and spawn codes.
 * ABOUT THIS VERSION *
 **********************
 
-Current Version: 172.1121.2.0
+Current Version: ${version}
 
 My mods follow a simple and informative versioning system. The first number indicates the 
 Minecraft version without the periods. The next number is the build of Minecraft Forge this
