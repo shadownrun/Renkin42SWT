@@ -1,0 +1,13 @@
+These are the arguments to use in the run configurations in eclipse.
+
+Main Class:
+	net.minecraft.launchwrapper.Launch
+
+Program Arguments:
+	--version 1.6 
+	--tweakClass cpw.mods.fml.common.launcher.FMLTweaker 
+	--accessToken modstest 
+	--username YourUserName
+
+JVM Arguments:
+	-Dfml.ignoreInvalidMinecraftCertificates=true
