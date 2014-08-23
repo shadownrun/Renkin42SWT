@@ -37,8 +37,8 @@ curse {
 	"""
 	releaseType = "beta"
 }
-processResources
-{
+
+processResources {
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
@@ -51,5 +51,6 @@ processResources
     // copy everything else, thats not the mcmod.info
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
+        exclude 'README.txt'
     }
 }

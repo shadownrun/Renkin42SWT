@@ -1,3 +1,5 @@
+IF THIS FILE LOOKS WEIRD, TRY VIEWING IT IN NOTEPAD++
+
 **********************
 *      READ ME!      *
 **********************
