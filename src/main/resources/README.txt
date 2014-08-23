@@ -1,4 +1,4 @@
-IF THIS FILE LOOKS WEIRD, TRY VIEWING IT IN NOTEPAD++
+IF THIS FILE LOOKS WEIRD, TRY VIEWING IT IN WORDPAD OR NOTEPAD++
 
 **********************
 *      READ ME!      *
@@ -52,17 +52,17 @@ direct ports will not result in this number staying the same.
 **********************
 
 This mod currently supports the following languages:
-	English (English)
-	Pirate (Pirate Speak)
-	Spanish (Español)
-	German (Deutsch)
-	Portuguese (Portuguese)
-	Afrikaans (Afrikaans)
-	Danish (Dansk)
-	Swedish (Svenska)
-	Japanese (日本語)
-	Polish (Polski)
-	Russian (Русский)
+	English
+	Pirate
+	Spanish
+	German
+	Portuguese
+	Afrikaans
+	Danish
+	Swedish
+	Japanese
+	Polish
+	Russian
 
 My apologies for not translating this README, too much work.
 
