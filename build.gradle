@@ -17,7 +17,6 @@ buildscript {
 
 apply plugin: 'forge'
 apply plugin: 'curseforge'
-apply plugin: 'announce'
 
 version = "172.1121.2.0.beta.2"
 group= "com.renkin42.renkin42swt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -37,15 +36,6 @@ curse {
 	Just ignore this
 	"""
 	releaseType = "beta"
-}
-
-announce {
-	username = 'Renkin42'
-	password = twitter_password
-}
-
-task twitter << {
-	announce.announce("This is a gradle test. Mod version: " + project.version, "twitter")
 }
 
 processResources {
