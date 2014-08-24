@@ -22,6 +22,12 @@ It is the most likely one to change on update, and simply indicates some sort of
 direct ports will not result in this number staying the same.
 
 **********************
+*     CHANGLOG       *
+**********************
+
+--{version}--
+{changelog}
+**********************
 *   INSTALL FORGE    *
 **********************
 

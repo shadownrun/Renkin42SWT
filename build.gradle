@@ -45,7 +45,7 @@ processResources {
         include 'README.txt'
                 
         // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+        expand 'version':project.version, 'mcversion':project.minecraft.version, 'changelog':project.curse.changelog
     }
         
     // copy everything else, thats not the mcmod.info
