@@ -25,8 +25,8 @@ direct ports will not result in this number staying the same.
 *     CHANGLOG       *
 **********************
 
---{version}--
-{changelog}
+--[${version}]--
+${changelog}
 **********************
 *   INSTALL FORGE    *
 **********************

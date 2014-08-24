@@ -18,7 +18,7 @@ buildscript {
 apply plugin: 'forge'
 apply plugin: 'curseforge'
 
-version = "172.1121.2.0.beta.1"
+version = "172.1121.2.0.beta.2"
 group= "com.renkin42.renkin42swt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Renkin42SWT"
 
@@ -31,7 +31,7 @@ curse {
 	apiKey = curseforge_key //Located in gradle.properties, not sharing.
 	projectId = "60999"
 	changelog = """
-	172.1121.2.0.beta.1
+	172.1121.2.0.beta.2
 	This is a test
 	Just ignore this
 	"""
