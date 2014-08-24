@@ -224,7 +224,6 @@ pip-log.txt
 
 .gradle/
 build/
-gradle.properties
 
 
 #################
