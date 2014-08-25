@@ -12,8 +12,12 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.2'
     }
 }
+
+import twitter4j.*
+import java.io.*
 
 apply plugin: 'forge'
 apply plugin: 'curseforge'
@@ -51,4 +55,13 @@ processResources {
         exclude 'mcmod.info'
         exclude 'README.txt'
     }
+}
+
+task twitter << {
+	// Don't try running this. You'll need the twitter4j.properties file
+	// To get the keys, go to dev.twitter.com and create a new app.
+	// Template for twitter4j.properties: https://gist.github.com/seratch/4238807
+	Twitter twitter = new TwitterFactory().getInstance()
+	Status status = twitter.updateStatus("Stuff Worth Throwing " + project.curse.releaseType + " version " + project.version + " is now live on curse! Check it out at http://www.curse.com/mc-mods/minecraft/stuff-worth-throwing #Minecraft #Mods")
+	println("Successfully updated the status to [" + status.getText() + "].")
 }
