@@ -30,7 +30,7 @@ import net.minecraftforge.common.config.Configuration;
 public class StuffWorthThrowing {
 
 	public static final String mod_id = "renkin42swt";
-	public static final String version = "172.1121.2.0";
+	public static final String version = "1710.1180.2.0";
 	
 	static int startEntityId = 256;
 	

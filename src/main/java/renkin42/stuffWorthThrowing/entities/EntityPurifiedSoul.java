@@ -42,7 +42,7 @@ public class EntityPurifiedSoul extends EntityThrowable {
 			EntityHelpfulSoul entitysoul = new EntityHelpfulSoul(this.worldObj);
             entitysoul.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
             entitysoul.setTamed(true);
-            entitysoul.setOwner(player.getCommandSenderName());
+            entitysoul.func_152115_b(player.getUniqueID().toString());
             entitysoul.worldObj.setEntityState(entitysoul, (byte)7);
             this.worldObj.spawnEntityInWorld(entitysoul);
             

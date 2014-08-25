@@ -61,7 +61,7 @@ public class EntityLoveLetter extends EntityThrowable {
 				EntityWolf babyWolf = new EntityWolf(this.worldObj);
 				babyWolf.setGrowingAge(-24000);
 				if (adultWolf.isTamed()) {
-					babyWolf.setOwner(adultWolf.getOwnerName());
+					babyWolf.func_152115_b(adultWolf.func_152113_b());
 					babyWolf.setTamed(true);
 				}
 				babyWolf.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, 0.0F);
@@ -71,7 +71,7 @@ public class EntityLoveLetter extends EntityThrowable {
 				EntityOcelot babyOcelot = new EntityOcelot(this.worldObj);
 				babyOcelot.setGrowingAge(-24000);
 				if (adultOcelot.isTamed()) {
-					babyOcelot.setOwner(adultOcelot.getOwnerName());
+					babyOcelot.func_152115_b(adultOcelot.func_152113_b());
 					babyOcelot.setTamed(true);
 					babyOcelot.setTameSkin(adultOcelot.getTameSkin());
 				}
