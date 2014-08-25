@@ -62,6 +62,7 @@ task twitter << {
 	// To get the keys, go to dev.twitter.com and create a new app.
 	// Template for twitter4j.properties: https://gist.github.com/seratch/4238807
 	Twitter twitter = new TwitterFactory().getInstance()
-	Status status = twitter.updateStatus("Stuff Worth Throwing " + project.curse.releaseType + " version " + project.version + " is now live on curse! Check it out at http://www.curse.com/mc-mods/minecraft/stuff-worth-throwing #Minecraft #Mods")
+	ext.tweet = "Stuff Worth Throwing $project.curse.releaseType version $project.version is now live on curse! Check it out at http://www.curse.com/mc-mods/minecraft/stuff-worth-throwing #Minecraft #Gradle"
+	Status status = twitter.updateStatus(tweet)
 	println("Successfully updated the status to [" + status.getText() + "].")
 }
